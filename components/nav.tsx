@@ -40,7 +40,7 @@ export default function Nav() {
               href="/"
             >
               <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
-                فلوسيا
+                حصادي
               </h1>
             </a>
           </motion.div>
@@ -86,26 +86,29 @@ export default function Nav() {
 
         {/* Navigation Links for large screens */}
         <div className="relative hidden text-lg sm:flex  ">
-          {["معدل الأرباح", "حساب الأسهم", "حساب القروض", "تحويل العملات"].map(
-            (item) => (
-              <a
-                key={item}
-                className="relative mx-3 font-bold text-primary transition-all duration-200 delay-50"
-                href={`/${item.toLowerCase()}`}
-                onMouseEnter={() => setActiveLink(item)}
-                onMouseLeave={() => setActiveLink("")}
-                onClick={() => setActiveLink(item)}
-              >
-                {item}
-                <motion.span
-                  className="absolute -bottom-2 left-0 items-center bg-black h-0.5"
-                  variants={underlineVariants}
-                  initial="hidden"
-                  animate={activeLink === item ? "visible" : "hidden"}
-                />
-              </a>
-            )
-          )}
+          {[
+            "معدل الأرباح",
+            "حاسبة الأسهم",
+            "حاسبة القروض",
+            "تحويل العملات",
+          ].map((item) => (
+            <a
+              key={item}
+              className="relative mx-3 font-bold text-primary transition-all duration-200 delay-50"
+              href={`/${item.toLowerCase()}`}
+              onMouseEnter={() => setActiveLink(item)}
+              onMouseLeave={() => setActiveLink("")}
+              onClick={() => setActiveLink(item)}
+            >
+              {item}
+              <motion.span
+                className="absolute -bottom-2 left-0 items-center bg-black h-0.5"
+                variants={underlineVariants}
+                initial="hidden"
+                animate={activeLink === item ? "visible" : "hidden"}
+              />
+            </a>
+          ))}
         </div>
 
         {/* Navigation Links for small screens */}
@@ -127,14 +130,14 @@ export default function Nav() {
 "
                 href="/"
               >
-                حساب الأسهم
+                حاسبة الأسهم
               </a>
               <a
                 className="my-2 font-bold
 "
                 href="/"
               >
-                حساب القروض
+                حاسبة القروض
               </a>
               <a
                 className="my-2 font-bold
