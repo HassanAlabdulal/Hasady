@@ -23,6 +23,8 @@ import { registerSchema } from "@/validators/auth";
 
 // Define the shape of the errors object
 interface FormErrors {
+  email?: string;
+  password?: string;
   firstname?: string;
   lastname?: string;
   emailSignUp?: string;
@@ -33,6 +35,8 @@ interface FormErrors {
 export function TabsDemo() {
   // Form state
   const [formData, setFormData] = useState({
+    email: '',
+    password: '',
     emailSignUp: '',
     firstname: '',
     lastname: '',
@@ -55,23 +59,23 @@ export function TabsDemo() {
 
     const result = registerSchema.safeParse(formData);
 
-    // if (!result.success) {
-    //   // Define the initial value of the accumulator with the correct type
-    //   const newErrors = result.error.issues.reduce<FormErrors>((acc, issue) => {
-    //     const path = issue.path[0]; // Assuming path is not nested for simplicity
-    //     if (typeof path === "string" || typeof path === "number") {
-    //       acc[path] = issue.message;
-    //     }
-    //     return acc;
-    //   }, {});
+    if (!result.success) {
+      // Define the initial value of the accumulator with the correct type
+      const newErrors = result.error.issues.reduce<FormErrors>((acc, issue) => {
+        const path = issue.path[0]; // Assuming path is not nested for simplicity
+        if (typeof path === "string" || typeof path === "number") {
+          acc[path] = issue.message;
+        }
+        return acc;
+      }, {});
     
-    //   setErrors(newErrors);
-    // } else {
-    //   // No errors, proceed with the form submission
-    //   setErrors({});
-    //   console.log('Form data is valid:', formData);
-    //   // Here you would typically send the data to your server
-    // }
+      setErrors(newErrors);
+    } else {
+      // No errors, proceed with the form submission
+      setErrors({});
+      console.log('Form data is valid:', formData);
+      // Here you would typically send the data to your server
+    }
   };
   
 
