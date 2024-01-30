@@ -33,7 +33,7 @@ export default function Nav() {
           <motion.div
             animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 20 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.25 }}
           >
             <a
               className="inline-flex items-center text-xl font-semibold gap-x-2 "
@@ -55,7 +55,7 @@ export default function Nav() {
             <motion.div
               animate={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -20 }}
-              transition={{ delay: 0.1 }}
+              transition={{ delay: 0.25 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
               className={`burger cursor-pointer space-y-2.5 xl:hidden lg:hidden mr-5
         `}
