@@ -24,7 +24,7 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background text-foreground">
+    <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background">
       <nav
         className="md:max-w-[75rem] w-full mx-auto max-md:px-10 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
@@ -112,25 +112,25 @@ export default function Nav() {
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
                rounded-lg gap-6 text-xl bg-primary font-bold text-center shadow-md py-7 mt-4 ml-5"
             >
-              <a className="my-2 font-medium text-foreground" href="/">
+              <a className="my-2 font-bold text-foreground" href="/">
                 معدل الأرباح
               </a>
               <a
-                className="my-2 font-medium text-foreground
+                className="my-2 font-bold text-foreground
 "
                 href="/"
               >
                 حساب الأسهم
               </a>
               <a
-                className="my-2 font-medium text-foreground
+                className="my-2 font-bold text-foreground
 "
                 href="/"
               >
                 حساب القروض
               </a>
               <a
-                className="my-2 font-medium text-foreground
+                className="my-2 font-bold text-foreground
 "
                 href="/"
               >
