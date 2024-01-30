@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button"
 import {
@@ -16,8 +18,8 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import { registerSchema } from "@/validators/auth";
 import { z } from 'zod';
+import { registerSchema } from "@/validators/auth";
 
 // Define the shape of the errors object
 interface FormErrors {
@@ -53,32 +55,56 @@ export function TabsDemo() {
 
     const result = registerSchema.safeParse(formData);
 
-    if (!result.success) {
-      // Convert the Zod error format to a more convenient object
-      const newErrors = result.error.issues.reduce((acc, issue) => {
-        acc[issue.path[0]] = issue.message;
-        return acc;
-      }, {});
-
-      setErrors(newErrors);
-    } else {
-      // No errors, proceed with the form submission
-      setErrors({});
-      console.log('Form data is valid:', formData);
-      // Here you would typically send the data to your server
-    }
+    // if (!result.success) {
+    //   // Define the initial value of the accumulator with the correct type
+    //   const newErrors = result.error.issues.reduce<FormErrors>((acc, issue) => {
+    //     const path = issue.path[0]; // Assuming path is not nested for simplicity
+    //     if (typeof path === "string" || typeof path === "number") {
+    //       acc[path] = issue.message;
+    //     }
+    //     return acc;
+    //   }, {});
+    
+    //   setErrors(newErrors);
+    // } else {
+    //   // No errors, proceed with the form submission
+    //   setErrors({});
+    //   console.log('Form data is valid:', formData);
+    //   // Here you would typically send the data to your server
+    // }
   };
+  
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center h-screen">
       <Tabs defaultValue="signIn" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="signIn">تسجيل الدخول</TabsTrigger>
           <TabsTrigger value="signUp">التسجيل</TabsTrigger>
         </TabsList>
         <TabsContent value="signIn">
-          {/* ...signIn content... */}
-        </TabsContent>
+        <Card>
+          <CardHeader>
+            <CardTitle>تسجيل الدخول</CardTitle>
+            <CardDescription>
+              قم بتسجيل الدخول من هنا
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <div className="space-y-1">
+              <Label htmlFor="email">البريد الالكتروني</Label>
+              <Input id="email" type="email" placeholder="flosya.help@gmail.com" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="password">كلمة المرور</Label>
+              <Input id="password" type="password" placeholder="********" />
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button className="w-full">تسجيل الدخول</Button>
+          </CardFooter>
+        </Card>
+      </TabsContent>
         <TabsContent value="signUp">
           <Card>
             <CardHeader>
@@ -89,7 +115,7 @@ export function TabsDemo() {
             </CardHeader>
             <form onSubmit={handleSubmit}>
               <CardContent className="space-y-4">
-                <div className="flex space-x-4">
+                <div className="flex gap-2">
                   <div className="flex-1">
                     <Label htmlFor="firstname">الاسم الأول</Label>
                     <Input name="firstname" id="firstname" placeholder="محمد" onChange={handleChange} />
