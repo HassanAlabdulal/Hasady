@@ -9,7 +9,7 @@ export default function Nav() {
 
   // Variants for Framer Motion animation
   const navVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: "-100%" },
+    hidden: { opacity: 0, scale: 0.95, y: "-8%" },
     visible: {
       opacity: 1,
       scale: 1,
@@ -30,14 +30,21 @@ export default function Nav() {
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
-          <a
-            className="inline-flex items-center text-xl font-semibold gap-x-2 "
-            href="/"
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            transition={{ delay: 0.1 }}
           >
-            <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
-              فلوسيا
-            </h1>
-          </a>
+            <a
+              className="inline-flex items-center text-xl font-semibold gap-x-2 "
+              href="/"
+            >
+              <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
+                فلوسيا
+              </h1>
+            </a>
+          </motion.div>
+
           <button
             type="button"
             className="sm:hidden"
@@ -47,8 +54,8 @@ export default function Nav() {
             {/* Hamburger Icon */}
             <motion.div
               animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 25 }}
-              transition={{ delay: 0.35 }}
+              initial={{ opacity: 0, x: -20 }}
+              transition={{ delay: 0.1 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
               className={`burger cursor-pointer space-y-2.5 xl:hidden lg:hidden mr-5
         `}
@@ -78,12 +85,12 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden text-lg sm:flex ">
+        <div className="relative hidden text-lg sm:flex  ">
           {["معدل الأرباح", "حساب الأسهم", "حساب القروض", "تحويل العملات"].map(
             (item) => (
               <a
                 key={item}
-                className="relative mx-3 font-bold text-[#3fc06e] transition-all duration-200 delay-50"
+                className="relative mx-3 font-bold text-primary transition-all duration-200 delay-50"
                 href={`/${item.toLowerCase()}`}
                 onMouseEnter={() => setActiveLink(item)}
                 onMouseLeave={() => setActiveLink("")}
@@ -110,27 +117,27 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-lg gap-6 text-xl bg-primary font-bold text-center shadow-md py-7 mt-4 ml-5"
+               rounded-2xl gap-5 text-xl font-bold text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
             >
-              <a className="my-2 font-bold text-foreground" href="/">
+              <a className="my-2 font-bold " href="/">
                 معدل الأرباح
               </a>
               <a
-                className="my-2 font-bold text-foreground
+                className="my-2 font-bold
 "
                 href="/"
               >
                 حساب الأسهم
               </a>
               <a
-                className="my-2 font-bold text-foreground
+                className="my-2 font-bold
 "
                 href="/"
               >
                 حساب القروض
               </a>
               <a
-                className="my-2 font-bold text-foreground
+                className="my-2 font-bold
 "
                 href="/"
               >
