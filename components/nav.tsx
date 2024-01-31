@@ -39,7 +39,10 @@ export default function Nav() {
               className="inline-flex items-center text-xl font-semibold gap-x-2 "
               href="/"
             >
-              <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
+              <h1
+                className="scroll-m-20 text-2xl font-extrabold tracking-tight
+               lg:text-4xl rounded-xl transition-all hover:scale-110 duration-500"
+              >
                 حصادي
               </h1>
             </a>
@@ -57,28 +60,30 @@ export default function Nav() {
               initial={{ opacity: 0, x: -20 }}
               transition={{ delay: 0.25 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
-              className={`burger cursor-pointer space-y-2.5 xl:hidden lg:hidden mr-5
+              className={`burger cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
         `}
             >
               <motion.span
                 animate={{
-                  rotateZ: isNavExpanded ? 45 : 0,
-                  y: isNavExpanded ? 12 : 0,
+                  rotate: isNavExpanded ? 45 : 0, // Rotate the top line 45 degrees to form one leg of the 'X'
+                  y: isNavExpanded ? 8.3 : 0, // Adjust the 'y' to move it down to meet the middle line
                 }}
-                className=" block h-0.5 w-8 bg-black"
+                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
               ></motion.span>
 
               <motion.span
-                animate={{ width: isNavExpanded ? 0 : 32 }}
-                className=" block h-0.5 w-6 bg-black"
+                animate={{
+                  opacity: isNavExpanded ? 0 : 1, // Hide the middle span by fading it out
+                }}
+                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
               ></motion.span>
+
               <motion.span
                 animate={{
-                  rotateZ: isNavExpanded ? -45 : 0,
-                  y: isNavExpanded ? -12 : 0,
-                  width: isNavExpanded ? 32 : 32,
+                  rotate: isNavExpanded ? -45 : 0, // Rotate the bottom line -45 degrees to form the other leg of the 'X'
+                  y: isNavExpanded ? -8.3 : 0, // Adjust the 'y' to move it up to meet the middle line
                 }}
-                className=" block h-0.5 w-4 bg-black"
+                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
               ></motion.span>
             </motion.div>
           </button>
