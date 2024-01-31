@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -27,7 +28,7 @@ export default function Nav() {
   return (
     <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background">
       <nav
-        className="md:max-w-[75rem] w-full mx-auto md:px-10 px-10 sm:flex sm:items-center sm:justify-between"
+        className=" w-full mx-auto md:px-10 px-10 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -150,6 +151,11 @@ export default function Nav() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        <div className="flex gap-2">
+          <Button className=" rounded-lg shadow-xl">تسجيل الدخول</Button>
+          <Button>ha</Button>
+        </div>
       </nav>
     </header>
   );
