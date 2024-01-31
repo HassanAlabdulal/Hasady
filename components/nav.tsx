@@ -49,7 +49,7 @@ export default function Nav() {
                 </h1>
                 <img
                   src="/assets/logo.svg"
-                  className="w-8 h-auto md:w-11" // This sets the width to 3rem on small screens and 2rem on very small screens
+                  className="w-8 h-auto md:w-11"
                   alt="logo"
                 />
               </div>
