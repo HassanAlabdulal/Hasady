@@ -90,7 +90,7 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden text-xl sm:flex  ">
+        <div className="relative hidden text-xl sm:flex">
           {[
             "معدل الأرباح",
             "حاسبة الأسهم",
@@ -130,25 +130,13 @@ export default function Nav() {
               <a className="my-2 font-semibold " href="/">
                 معدل الأرباح
               </a>
-              <a
-                className="my-2 font-semibold
-"
-                href="/"
-              >
+              <a className="my-2 font-semibold" href="/">
                 حاسبة الأسهم
               </a>
-              <a
-                className="my-2 font-semibold
-"
-                href="/"
-              >
+              <a className="my-2 font-semibold" href="/">
                 حاسبة القروض
               </a>
-              <a
-                className="my-2 font-semibold
-"
-                href="/"
-              >
+              <a className="my-2 font-semibold" href="/">
                 تحويل العملات
               </a>
             </motion.div>
