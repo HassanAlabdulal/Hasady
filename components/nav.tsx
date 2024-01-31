@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -36,15 +37,22 @@ export default function Nav() {
             transition={{ delay: 0.25 }}
           >
             <a
-              className="inline-flex items-center text-xl font-semibold gap-x-2 "
+              className="inline-flex items-center text-xl font-semibold gap-x-2 text-center "
               href="/"
             >
-              <h1
-                className="scroll-m-20 text-2xl font-extrabold tracking-tight
-               lg:text-4xl rounded-xl transition-all hover:scale-110 duration-500"
-              >
-                حصادي
-              </h1>
+              <div className="flex items-center justify-center gap-1">
+                <h1
+                  className="scroll-m-20 text-2xl font-extrabold tracking-tight 
+               lg:text-4xl rounded-xl"
+                >
+                  حصادي
+                </h1>
+                <img
+                  src="/assets/logo.svg"
+                  className="w-8 h-auto md:w-11" // This sets the width to 3rem on small screens and 2rem on very small screens
+                  alt="logo"
+                />
+              </div>
             </a>
           </motion.div>
 
