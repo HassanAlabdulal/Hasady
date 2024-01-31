@@ -26,7 +26,7 @@ export default function Nav() {
   return (
     <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background">
       <nav
-        className="md:max-w-[75rem] w-full mx-auto max-md:px-10 sm:flex sm:items-center sm:justify-between"
+        className="md:max-w-[75rem] w-full mx-auto md:px-10 px-10 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -90,7 +90,7 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden text-lg sm:flex  ">
+        <div className="relative hidden text-xl sm:flex  ">
           {[
             "معدل الأرباح",
             "حاسبة الأسهم",
@@ -125,27 +125,27 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-2xl gap-5 text-xl font-bold text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
+               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
             >
-              <a className="my-2 font-bold " href="/">
+              <a className="my-2 font-semibold " href="/">
                 معدل الأرباح
               </a>
               <a
-                className="my-2 font-bold
+                className="my-2 font-semibold
 "
                 href="/"
               >
                 حاسبة الأسهم
               </a>
               <a
-                className="my-2 font-bold
+                className="my-2 font-semibold
 "
                 href="/"
               >
                 حاسبة القروض
               </a>
               <a
-                className="my-2 font-bold
+                className="my-2 font-semibold
 "
                 href="/"
               >
