@@ -142,19 +142,19 @@ export default function Nav() {
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
                rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
             >
-              <a className="my-2 font-semibold px-12 " href="/">
+              <a className="my-2 font-semibold w-5/6 " href="/">
                 معدل الأرباح
               </a>
-              <a className="my-2 font-semibold px-12" href="/">
+              <a className="my-2 font-semibold w-5/6" href="/">
                 حاسبة الأسهم
               </a>
-              <a className="my-2 font-semibold px-12" href="/">
+              <a className="my-2 font-semibold w-5/6" href="/">
                 حاسبة القروض
               </a>
-              <a className="my-2 font-semibold px-12" href="/">
+              <a className="my-2 font-semibold w-5/6" href="/">
                 تحويل العملات
               </a>
-              <Button className=" rounded-xl text-md px-8 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
+              <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
                 تسجيل الدخول
               </Button>
             </motion.div>
