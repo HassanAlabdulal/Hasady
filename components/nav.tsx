@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import ModeToggle from "./modeToggle";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -154,7 +155,7 @@ export default function Nav() {
 
         <div className="flex gap-2">
           <Button className=" rounded-lg shadow-xl">تسجيل الدخول</Button>
-          <Button>ha</Button>
+          {/* <ModeToggle /> */}
         </div>
       </nav>
     </header>
