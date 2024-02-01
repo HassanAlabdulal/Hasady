@@ -100,7 +100,12 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden text-xl sm:flex">
+        <motion.div
+          className="relative hidden text-xl sm:flex"
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          transition={{ delay: 0.24 }}
+        >
           {[
             "معدل الأرباح",
             "حاسبة الأسهم",
@@ -124,7 +129,7 @@ export default function Nav() {
               />
             </a>
           ))}
-        </div>
+        </motion.div>
 
         {/* Navigation Links for small screens */}
         <AnimatePresence>
@@ -156,12 +161,17 @@ export default function Nav() {
           )}
         </AnimatePresence>
 
-        <div className="flex gap-2 max-sm:hidden">
+        <motion.div
+          className="flex gap-2 max-sm:hidden"
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          transition={{ delay: 0.25 }}
+        >
           <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
             تسجيل الدخول
           </Button>
           {/* <ModeToggle /> */}
-        </div>
+        </motion.div>
       </nav>
     </header>
   );
