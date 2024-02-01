@@ -27,9 +27,9 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background">
+    <header className="relative z-50 flex flex-wrap w-full text-sm py-8 sm:justify-start sm:flex-nowrap bg-background">
       <nav
-        className=" w-full mx-auto md:px-10 px-10 sm:flex sm:items-center sm:justify-between"
+        className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -39,21 +39,21 @@ export default function Nav() {
             transition={{ delay: 0.25 }}
           >
             <a
-              className="inline-flex items-center text-xl font-semibold gap-x-2 text-center "
+              className="flex items-center justify-center text-xl font-semibold text-center "
               href="/"
             >
-              <div className="flex items-center justify-center gap-1">
+              <div className="flex items-center justify-center text-center gap-1">
+                <img
+                  src="/assets/logo.svg"
+                  className="w-6 h-auto md:w-9"
+                  alt="logo"
+                />
                 <h1
                   className="scroll-m-20 text-2xl font-extrabold tracking-tight 
                lg:text-4xl rounded-xl"
                 >
                   حصادي
                 </h1>
-                <img
-                  src="/assets/logo.svg"
-                  className="w-8 h-auto md:w-11"
-                  alt="logo"
-                />
               </div>
             </a>
           </motion.div>
@@ -78,14 +78,14 @@ export default function Nav() {
                   rotate: isNavExpanded ? 45 : 0, // Rotate the top line 45 degrees to form one leg of the 'X'
                   y: isNavExpanded ? 8.3 : 0, // Adjust the 'y' to move it down to meet the middle line
                 }}
-                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
 
               <motion.span
                 animate={{
                   opacity: isNavExpanded ? 0 : 1, // Hide the middle span by fading it out
                 }}
-                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
 
               <motion.span
@@ -93,7 +93,7 @@ export default function Nav() {
                   rotate: isNavExpanded ? -45 : 0, // Rotate the bottom line -45 degrees to form the other leg of the 'X'
                   y: isNavExpanded ? -8.3 : 0, // Adjust the 'y' to move it up to meet the middle line
                 }}
-                className="block h-0.5 w-6 bg-black" // Ensure all spans have this same width and height
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
             </motion.div>
           </button>
@@ -109,7 +109,7 @@ export default function Nav() {
           ].map((item) => (
             <a
               key={item}
-              className="relative mx-3 font-bold text-primary transition-all duration-200 delay-50"
+              className="relative mx-6 font-bold text-primary transition-all duration-200 delay-50"
               href={`/${item.toLowerCase()}`}
               onMouseEnter={() => setActiveLink(item)}
               onMouseLeave={() => setActiveLink("")}
@@ -137,24 +137,29 @@ export default function Nav() {
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
                rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
             >
-              <a className="my-2 font-semibold " href="/">
+              <a className="my-2 font-semibold px-12 " href="/">
                 معدل الأرباح
               </a>
-              <a className="my-2 font-semibold" href="/">
+              <a className="my-2 font-semibold px-12" href="/">
                 حاسبة الأسهم
               </a>
-              <a className="my-2 font-semibold" href="/">
+              <a className="my-2 font-semibold px-12" href="/">
                 حاسبة القروض
               </a>
-              <a className="my-2 font-semibold" href="/">
+              <a className="my-2 font-semibold px-12" href="/">
                 تحويل العملات
               </a>
+              <Button className=" rounded-xl text-md px-8 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
+                تسجيل الدخول
+              </Button>
             </motion.div>
           )}
         </AnimatePresence>
 
-        <div className="flex gap-2">
-          <Button className=" rounded-lg shadow-xl">تسجيل الدخول</Button>
+        <div className="flex gap-2 max-sm:hidden">
+          <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
+            تسجيل الدخول
+          </Button>
           {/* <ModeToggle /> */}
         </div>
       </nav>
