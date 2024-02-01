@@ -20,6 +20,9 @@ import {
 } from "@/components/ui/tabs"
 import { z } from 'zod';
 import { registerSchema } from "@/validators/auth";
+import { Checkbox } from "@/components/ui/checkbox"
+
+
 
 // Define the shape of the errors object
 interface FormErrors {
@@ -83,6 +86,11 @@ export function TabsDemo() {
   const handleRememberMeChange = (e: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
     setRememberMe(e.target.checked);
   };
+
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const handleTermsChange = (e: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
+    setTermsAccepted(e.target.checked);
+  }
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -167,6 +175,19 @@ export function TabsDemo() {
                   <Input name="passwordConfirm" id="passwordConfirm" type="password" placeholder="********" onChange={handleChange} />
                   {errors.passwordConfirm && <p className="text-red-500">{errors.passwordConfirm}</p>}
                 </div>
+                <div className="flex items-center mt-2">
+                <input
+                  id="terms"
+                  type="checkbox"
+                  checked={termsAccepted}
+                  onChange={handleTermsChange}
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mr-2"
+                />
+                <label htmlFor="terms" className="text-sm">
+                  تمت الموافقة على    
+                  <a href="/terms" className="text-blue-600 hover:underline"> الشروط والأحكام</a>
+                </label>
+              </div>
               </CardContent>
               <CardFooter>
                 <Button type="submit" className="w-full">إنشاء حساب</Button>
