@@ -79,34 +79,40 @@ export function ResetPassword() {
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            <div className="space-y-3">
-              <Label htmlFor="password">كلمة المرور الجديدة</Label>
-              <Input
-                id="password"
-                name="password"
-                type="password"
-                // placeholder="********"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full"
-              />
-              {errors.password && (
-                <p className="text-red-500">{errors.password}</p>
-              )}
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="password">كلمة المرور الجديدة</Label>
+                <Input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل"
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="w-full"
+                />
+                {errors.password && (
+                  <p className="text-red-500">{errors.password}</p>
+                )}
+              </div>
 
-              <Label htmlFor="passwordConfirm">تأكيد كلمة المرور الجديدة</Label>
-              <Input
-                id="passwordConfirm"
-                name="passwordConfirm"
-                type="password"
-                // placeholder="********"
-                value={formData.passwordConfirm}
-                onChange={handleChange}
-                className="w-full"
-              />
-              {errors.passwordConfirm && (
-                <p className="text-red-500">{errors.passwordConfirm}</p>
-              )}
+              <div>
+                <Label htmlFor="passwordConfirm">
+                  تأكيد كلمة المرور الجديدة
+                </Label>
+                <Input
+                  id="passwordConfirm"
+                  name="passwordConfirm"
+                  type="password"
+                  placeholder="يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل"
+                  value={formData.passwordConfirm}
+                  onChange={handleChange}
+                  className="w-full"
+                />
+                {errors.passwordConfirm && (
+                  <p className="text-red-500">{errors.passwordConfirm}</p>
+                )}
+              </div>
             </div>
           </CardContent>
           <CardFooter>
