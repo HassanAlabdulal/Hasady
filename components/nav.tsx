@@ -43,14 +43,16 @@ export default function Nav() {
               href="/"
             >
               <div className="flex items-center justify-center text-center gap-1">
-                <img
+                <Image
                   src="/assets/logo.svg"
+                  width={50}
+                  height={50}
                   className="w-6 h-auto md:w-9"
                   alt="logo"
                 />
                 <h1
                   className="scroll-m-20 text-2xl font-extrabold tracking-tight 
-               lg:text-4xl rounded-xl"
+                    lg:text-4xl rounded-xl"
                 >
                   حصادي
                 </h1>
