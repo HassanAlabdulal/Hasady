@@ -1,26 +1,32 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { z } from 'zod';
+import { z } from "zod";
 
 // Email validation schema
 const emailSchema = z.object({
   email: z.string().email({ message: "الرجاء إدخال بريد إلكتروني صالح." }),
 });
 
-export function ForgotPasswordPage() {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+export function ForgotPassword() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
   // Handle form submission
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     // Validate email
     const result = emailSchema.safeParse({ email });
@@ -83,4 +89,4 @@ export function ForgotPasswordPage() {
   );
 }
 
-export default ForgotPasswordPage;
+export default ForgotPassword;

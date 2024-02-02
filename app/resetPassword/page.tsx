@@ -1,11 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { z } from 'zod';
+import { z } from "zod";
 
 // Define the shape of the errors object
 interface FormErrors {
@@ -14,29 +20,33 @@ interface FormErrors {
 }
 
 // Password reset validation schema
-const resetPasswordSchema = z.object({
-  password: z.string()
-    .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
-    .max(100),
-  passwordConfirm: z.string()
-    .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
-    .max(100),
-}).refine((data) => data.password === data.passwordConfirm, {
-  message: "كلمة المرور وتأكيد كلمة المرور لا تتطابقان",
-  path: ["passwordConfirm"],
-});
+const resetPasswordSchema = z
+  .object({
+    password: z
+      .string()
+      .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
+      .max(100),
+    passwordConfirm: z
+      .string()
+      .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
+      .max(100),
+  })
+  .refine((data) => data.password === data.passwordConfirm, {
+    message: "كلمة المرور وتأكيد كلمة المرور لا تتطابقان",
+    path: ["passwordConfirm"],
+  });
 
-export function ResetPasswordPage() {
+export function ResetPassword() {
   const [formData, setFormData] = useState({
-    password: '',
-    passwordConfirm: '',
+    password: "",
+    passwordConfirm: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
 
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   // Handle form submission
@@ -56,7 +66,7 @@ export function ResetPasswordPage() {
       setErrors(newErrors);
     } else {
       // Passwords are valid, process the reset
-      console.log('Passwords are valid:', formData);
+      console.log("Passwords are valid:", formData);
       // Here you would typically handle the password reset logic
     }
   };
@@ -69,30 +79,34 @@ export function ResetPasswordPage() {
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <Label htmlFor="password">كلمة المرور الجديدة</Label>
               <Input
                 id="password"
                 name="password"
                 type="password"
-                placeholder="********"
+                // placeholder="********"
                 value={formData.password}
                 onChange={handleChange}
                 className="w-full"
               />
-              {errors.password && <p className="text-red-500">{errors.password}</p>}
+              {errors.password && (
+                <p className="text-red-500">{errors.password}</p>
+              )}
 
               <Label htmlFor="passwordConfirm">تأكيد كلمة المرور الجديدة</Label>
               <Input
                 id="passwordConfirm"
                 name="passwordConfirm"
                 type="password"
-                placeholder="********"
+                // placeholder="********"
                 value={formData.passwordConfirm}
                 onChange={handleChange}
                 className="w-full"
               />
-              {errors.passwordConfirm && <p className="text-red-500">{errors.passwordConfirm}</p>}
+              {errors.passwordConfirm && (
+                <p className="text-red-500">{errors.passwordConfirm}</p>
+              )}
             </div>
           </CardContent>
           <CardFooter>
@@ -106,4 +120,4 @@ export function ResetPasswordPage() {
   );
 }
 
-export default ResetPasswordPage;
+export default ResetPassword;
