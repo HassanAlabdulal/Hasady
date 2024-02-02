@@ -56,24 +56,25 @@ export default function ForgotPassword() {
           // Email input form
           <form onSubmit={handleSubmit}>
             <CardContent>
-              <div className="space-y-4">
-                <Label htmlFor="email">البريد الإلكتروني</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="floosya.help@gmail.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full"
-                />
-                {error && <p className="text-red-500">{error}</p>}
+              <div className="space-y-5">
+                <div>
+                  <Label htmlFor="email">البريد الإلكتروني</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="hasady.help@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full mt-1"
+                  />
+                  {error && <p className="text-red-500">{error}</p>}
+                </div>
+
+                <Button type="submit" className="w-full">
+                  إرسال رابط إعادة التعيين
+                </Button>
               </div>
             </CardContent>
-            <CardFooter>
-              <Button type="submit" className="w-full">
-                إرسال رابط إعادة التعيين
-              </Button>
-            </CardFooter>
           </form>
         ) : (
           // Temporary message box

@@ -79,7 +79,7 @@ export default function ResetPassword() {
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
                 <Label htmlFor="password">كلمة المرور الجديدة</Label>
                 <Input
