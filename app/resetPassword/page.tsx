@@ -36,7 +36,7 @@ const resetPasswordSchema = z
     path: ["passwordConfirm"],
   });
 
-export function ResetPassword() {
+export default function ResetPassword() {
   const [formData, setFormData] = useState({
     password: "",
     passwordConfirm: "",
@@ -125,5 +125,3 @@ export function ResetPassword() {
     </div>
   );
 }
-
-export default ResetPassword;

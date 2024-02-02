@@ -18,7 +18,7 @@ const emailSchema = z.object({
   email: z.string().email({ message: "الرجاء إدخال بريد إلكتروني صالح." }),
 });
 
-export function ForgotPassword() {
+export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [showMessage, setShowMessage] = useState(false);
@@ -88,5 +88,3 @@ export function ForgotPassword() {
     </div>
   );
 }
-
-export default ForgotPassword;
