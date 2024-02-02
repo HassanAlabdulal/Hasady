@@ -47,7 +47,7 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex md:items-center items-start mt-24 justify-center h-screen">
       <Card className="w-full max-w-md p-4">
         <CardHeader>
           <CardTitle>استعادة كلمة المرور</CardTitle>
