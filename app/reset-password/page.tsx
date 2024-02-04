@@ -72,7 +72,7 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="flex md:items-center items-start mt-24 justify-center h-screen">
+    <div className="flex md:items-center items-start max-sm:mt-24 justify-center h-screen">
       <Card className="w-full max-w-md p-4">
         <CardHeader>
           <CardTitle>إعادة تعيين كلمة المرور</CardTitle>
