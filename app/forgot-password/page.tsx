@@ -62,7 +62,7 @@ export default function ForgotPassword() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="hasady.help@gmail.com"
+                    placeholder="tryhasady@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full mt-1"
