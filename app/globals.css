@@ -66,7 +66,7 @@
   font-family: "Tajawal", sans-serif;
 }
 
-.background {
+.backgroundColor {
   background-image: linear-gradient(
     to top,
     #03335c,
@@ -82,4 +82,15 @@
     #013968,
     #03335c
   );
+}
+
+.background {
+  background: url(/assets/back.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.transparent {
+  background: rgba(0, 0, 0, 0);
 }

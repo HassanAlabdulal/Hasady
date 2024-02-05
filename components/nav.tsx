@@ -27,7 +27,7 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative z-50 flex flex-wrap w-full text-sm py-8 sm:justify-start sm:flex-nowrap bg-background">
+    <header className="relative z-50 flex flex-wrap w-full text-sm py-8 sm:justify-start sm:flex-nowrap">
       <nav
         className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
@@ -142,7 +142,7 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 background"
+               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 backgroundColor"
             >
               <a className="my-2 font-semibold w-5/6 " href="/">
                 معدل الأرباح
