@@ -1,5 +1,7 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-// import { Player } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Home() {
   return (
@@ -16,15 +18,15 @@ export default function Home() {
             متحمس تعرف أكثر؟ 🔥
           </Button>
         </div>
-        <div>
-          {/* <Player
-            src="./animation.json"
+        <div className="mt-12">
+          <Player
+            src="/assets/animations/homepage.json"
             background="transparent"
-            speed="1"
-            style={{ width: "200px", height: "200px" }}
+            speed={0.9}
+            style={{ width: "400px", height: "400px" }}
             loop
             autoplay
-          /> */}
+          />
         </div>
       </div>
     </main>
