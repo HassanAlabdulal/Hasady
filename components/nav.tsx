@@ -27,7 +27,10 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative z-50 flex flex-wrap w-full text-sm py-8 sm:justify-start sm:flex-nowrap">
+    <header
+      className=" z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap"
+      style={{ backgroundImage: "url('/assets/navBackground.png')" }}
+    >
       <nav
         className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
