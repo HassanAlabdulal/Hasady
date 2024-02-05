@@ -84,9 +84,14 @@
     #03335c
   );
 }
+.backgroundText {
+  background: -webkit-linear-gradient(rgb(38 38 38), #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .background {
-  background: url(/assets/back1.png) no-repeat;
+  background: url(/assets/background.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
