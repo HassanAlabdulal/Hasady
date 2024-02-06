@@ -14,7 +14,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="mt-12">
-          <Button className="inline-flex items-center justify-center px-7 py-6 text-xl  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-3xl">
+          <Button className="inline-flex items-center justify-center px-7 py-7 text-xl  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-full">
             متحمس تعرف أكثر؟ 🔥
           </Button>
         </div>
