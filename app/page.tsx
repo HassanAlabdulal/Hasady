@@ -6,7 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 export default function Home() {
   return (
     <main className="min-h-screen w-full background">
-      <div className=" flex flex-col items-center justify-center xl:pt-48">
+      <div className=" flex flex-col items-center justify-center xl:pt-48 pt-36">
         <div>
           <h1 className="text-black md:text-8xl font-extrabold md:leading-tight leading-normal tracking-tight text-5xl text-center ">
             الأمان المالي بدءًا <br />
