@@ -6,9 +6,9 @@ import { Player } from "@lottiefiles/react-lottie-player";
 export default function Home() {
   return (
     <main className="min-h-screen w-full background">
-      <div className=" flex flex-col items-center justify-center pt-64">
+      <div className=" flex flex-col items-center justify-center xl:pt-48">
         <div>
-          <h1 className="text-black lg:text-8xl font-extrabold lg:leading-tight tracking-tight text-5xl text-center ">
+          <h1 className="text-black md:text-8xl font-extrabold md:leading-tight leading-normal tracking-tight text-5xl text-center ">
             الأمان المالي بدءًا <br />
             <span className="text-primary ">من حصادي</span>
           </h1>
@@ -18,7 +18,7 @@ export default function Home() {
             متحمس تعرف أكثر؟ 🔥
           </Button>
         </div>
-        <div className="mt-12">
+        <div className="mt-11">
           <Player
             src="/assets/animations/homepage.json"
             background="transparent"
