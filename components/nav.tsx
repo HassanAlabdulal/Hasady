@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { Button } from "./ui/button";
+import ModeToggle from "./modeToggle";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -9,7 +12,7 @@ export default function Nav() {
 
   // Variants for Framer Motion animation
   const navVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: "-100%" },
+    hidden: { opacity: 0, scale: 0.95, y: "-8%" },
     visible: {
       opacity: 1,
       scale: 1,
@@ -24,20 +27,42 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative z-50 flex flex-wrap w-full text-sm py-6 sm:justify-start sm:flex-nowrap bg-background">
+    <header
+      className=" z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap"
+      style={{ backgroundImage: "url('/assets/navBackground.png')" }}
+    >
       <nav
-        className="md:max-w-[75rem] w-full mx-auto max-md:px-10 sm:flex sm:items-center sm:justify-between"
+        className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
-          <a
-            className="inline-flex items-center text-xl font-semibold gap-x-2 "
-            href="/"
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            transition={{ delay: 0.25 }}
           >
-            <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
-              فلوسيا
-            </h1>
-          </a>
+            <a
+              className="flex items-center justify-center text-xl font-semibold text-center "
+              href="/"
+            >
+              <div className="flex items-center justify-center text-center gap-1">
+                <Image
+                  src="/assets/logo.svg"
+                  width={50}
+                  height={50}
+                  className="w-6 h-auto md:w-9"
+                  alt="logo"
+                />
+                <h1
+                  className="scroll-m-20 text-2xl font-extrabold tracking-tight 
+                    lg:text-4xl rounded-xl"
+                >
+                  حصادي
+                </h1>
+              </div>
+            </a>
+          </motion.div>
+
           <button
             type="button"
             className="sm:hidden"
@@ -47,59 +72,69 @@ export default function Nav() {
             {/* Hamburger Icon */}
             <motion.div
               animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 25 }}
-              transition={{ delay: 0.35 }}
+              initial={{ opacity: 0, x: -20 }}
+              transition={{ delay: 0.25 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
-              className={`burger cursor-pointer space-y-2.5 xl:hidden lg:hidden mr-5
+              className={`burger cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
         `}
             >
               <motion.span
                 animate={{
-                  rotateZ: isNavExpanded ? 45 : 0,
-                  y: isNavExpanded ? 12 : 0,
+                  rotate: isNavExpanded ? 45 : 0, // Rotate the top line 45 degrees to form one leg of the 'X'
+                  y: isNavExpanded ? 8.3 : 0, // Adjust the 'y' to move it down to meet the middle line
                 }}
-                className=" block h-0.5 w-8 bg-black"
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
 
               <motion.span
-                animate={{ width: isNavExpanded ? 0 : 32 }}
-                className=" block h-0.5 w-6 bg-black"
+                animate={{
+                  opacity: isNavExpanded ? 0 : 1, // Hide the middle span by fading it out
+                }}
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
+
               <motion.span
                 animate={{
-                  rotateZ: isNavExpanded ? -45 : 0,
-                  y: isNavExpanded ? -12 : 0,
-                  width: isNavExpanded ? 32 : 32,
+                  rotate: isNavExpanded ? -45 : 0, // Rotate the bottom line -45 degrees to form the other leg of the 'X'
+                  y: isNavExpanded ? -8.3 : 0, // Adjust the 'y' to move it up to meet the middle line
                 }}
-                className=" block h-0.5 w-4 bg-black"
+                className="block h-0.5 w-6 bg-black"
               ></motion.span>
             </motion.div>
           </button>
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden text-lg sm:flex ">
-          {["معدل الأرباح", "حساب الأسهم", "حساب القروض", "تحويل العملات"].map(
-            (item) => (
-              <a
-                key={item}
-                className="relative mx-3 font-bold text-[#3fc06e] transition-all duration-200 delay-50"
-                href={`/${item.toLowerCase()}`}
-                onMouseEnter={() => setActiveLink(item)}
-                onMouseLeave={() => setActiveLink("")}
-                onClick={() => setActiveLink(item)}
-              >
-                {item}
-                <motion.span
-                  className="absolute -bottom-2 left-0 items-center bg-black h-0.5"
-                  variants={underlineVariants}
-                  initial="hidden"
-                  animate={activeLink === item ? "visible" : "hidden"}
-                />
-              </a>
-            )
-          )}
-        </div>
+        <motion.div
+          className="relative hidden text-xl sm:flex"
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          transition={{ delay: 0.24 }}
+        >
+          {[
+            "معدل الأرباح",
+            "حاسبة الأسهم",
+            "حاسبة القروض",
+            "تحويل العملات",
+          ].map((item) => (
+            <a
+              key={item}
+              className="relative mx-6 font-bold text-primary transition-all duration-200 delay-50"
+              href={`/${item.toLowerCase()}`}
+              onMouseEnter={() => setActiveLink(item)}
+              onMouseLeave={() => setActiveLink("")}
+              onClick={() => setActiveLink(item)}
+            >
+              {item}
+              <motion.span
+                className="absolute -bottom-2 left-0 items-center bg-black h-0.5"
+                variants={underlineVariants}
+                initial="hidden"
+                animate={activeLink === item ? "visible" : "hidden"}
+              />
+            </a>
+          ))}
+        </motion.div>
 
         {/* Navigation Links for small screens */}
         <AnimatePresence>
@@ -110,35 +145,38 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-lg gap-6 text-xl bg-primary font-bold text-center shadow-md py-7 mt-4 ml-5"
+               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 backgroundColor"
             >
-              <a className="my-2 font-bold text-foreground" href="/">
+              <a className="my-2 font-semibold w-5/6 " href="/">
                 معدل الأرباح
               </a>
-              <a
-                className="my-2 font-bold text-foreground
-"
-                href="/"
-              >
-                حساب الأسهم
+              <a className="my-2 font-semibold w-5/6" href="/">
+                حاسبة الأسهم
               </a>
-              <a
-                className="my-2 font-bold text-foreground
-"
-                href="/"
-              >
-                حساب القروض
+              <a className="my-2 font-semibold w-5/6" href="/">
+                حاسبة القروض
               </a>
-              <a
-                className="my-2 font-bold text-foreground
-"
-                href="/"
-              >
+              <a className="my-2 font-semibold w-5/6" href="/">
                 تحويل العملات
               </a>
+              <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
+                تسجيل الدخول
+              </Button>
             </motion.div>
           )}
         </AnimatePresence>
+
+        <motion.div
+          className="flex gap-2 max-sm:hidden"
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          transition={{ delay: 0.25 }}
+        >
+          <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
+            تسجيل الدخول
+          </Button>
+          {/* <ModeToggle /> */}
+        </motion.div>
       </nav>
     </header>
   );
