@@ -23,7 +23,7 @@ export default function Home() {
             src="/assets/animations/homepage.json"
             background="transparent"
             speed={0.9}
-            style={{ width: "400px", height: "400px" }}
+            className="md:w-[400px] md:h-[400px] w-[350px] h-[350px]"
             loop
             autoplay
           />
