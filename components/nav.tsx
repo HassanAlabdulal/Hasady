@@ -32,7 +32,7 @@ export default function Nav() {
       style={{ backgroundImage: "url('/assets/navBackground.png')" }}
     >
       <nav
-        className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
+        className=" max-w-[80rem] w-full mx-auto md:px-10 px-9 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
