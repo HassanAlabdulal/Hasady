@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Homepage() {
+  // Event handler to scroll to the Learnmore section
+  const scrollToLearnMore = () => {
+    const element = document.getElementById("learnmore");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="min-h-screen w-full background">
       <div className=" flex flex-col items-center justify-center pt-48 max-sm:pt-40">
@@ -14,7 +22,10 @@ export default function Homepage() {
           </h1>
         </div>
         <div className="mt-12">
-          <Button className="inline-flex items-center justify-center md:px-7 md:py-7 md:text-xl px-5 py-5 text-lg  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-full">
+          <Button
+            onClick={scrollToLearnMore}
+            className="inline-flex items-center justify-center md:px-7 md:py-7 md:text-xl px-5 py-5 text-lg  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-full"
+          >
             متحمس تعرف أكثر؟ 🔥
           </Button>
         </div>
