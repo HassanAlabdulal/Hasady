@@ -24,7 +24,7 @@ export default function Homepage() {
         <div className="mt-12">
           <Button
             onClick={scrollToLearnMore}
-            className="inline-flex items-center justify-center md:px-7 md:py-7 md:text-xl px-5 py-5 text-lg  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-full"
+            className="inline-flex items-center justify-center md:px-7 md:py-8 md:text-xl px-5 py-6 text-lg  shadow-2xl bg-black text-white hover:bg-neutral-800 rounded-full"
           >
             متحمس تعرف أكثر؟ 🔥
           </Button>

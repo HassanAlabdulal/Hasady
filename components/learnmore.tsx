@@ -2,7 +2,7 @@ export default function Learnmore() {
   return (
     <main
       id="learnmore"
-      className="flex items-start justify-center min-h-screen"
+      className="flex items-start justify-center min-h-screen bg-[#f9f9f9]"
     >
       <section className="pt-44">
         <div>
