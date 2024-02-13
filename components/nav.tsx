@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRef } from "react"; // Added useRef import
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -14,7 +13,6 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // You can adjust the value '50' based on when you want to change the header bg
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
