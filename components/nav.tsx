@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRef } from "react"; // Added useRef import
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -9,6 +10,26 @@ import ModeToggle from "./modeToggle";
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // You can adjust the value '50' based on when you want to change the header bg
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Variants for Framer Motion animation
   const navVariants = {
@@ -28,8 +49,14 @@ export default function Nav() {
 
   return (
     <header
-      className=" z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap"
-      style={{ backgroundImage: "url('/assets/navBackground.png')" }}
+      className={`z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap ${
+        isScrolled ? "bg-[#f9f9f9]" : ""
+      }`}
+      style={{
+        backgroundImage: isScrolled
+          ? "none"
+          : "url('/assets/navBackground.png')",
+      }}
     >
       <nav
         className=" max-w-[80rem] w-full mx-auto md:px-10 px-9 sm:flex sm:items-center sm:justify-between"
