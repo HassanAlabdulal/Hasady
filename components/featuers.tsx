@@ -18,7 +18,7 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "نظام يحسب لك أرباحك ",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
     featureImage: "image4",
@@ -36,7 +36,7 @@ const features: FeatureProps[] = [
     featureImage: "image",
   },
   {
-    title: "AI-Powered insights",
+    title: "h",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
     featureImage: "image",
@@ -79,10 +79,10 @@ export const Features = () => {
         {features.map(({ title, description, featureImage }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-[#f7f7f7] hover:bg-[#ecf4fa] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="bg-[#ecf4fa] hover:bg-[#f7f7f7] transition-all duration-200 shadow-sm hover:shadow-md"
           >
             <CardHeader>
-              <CardTitle className=" text-center">{title}</CardTitle>
+              <CardTitle className=" text-center ">{title}</CardTitle>
             </CardHeader>
 
             <CardContent>{description}</CardContent>
