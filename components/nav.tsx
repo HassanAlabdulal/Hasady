@@ -48,7 +48,7 @@ export default function Nav() {
   return (
     <header
       className={`z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap ${
-        isScrolled ? "bg-[#f9f9f9]" : ""
+        isScrolled ? "bg-[#f9f9f9] transition-all duration-200" : ""
       }`}
       style={{
         backgroundImage: isScrolled

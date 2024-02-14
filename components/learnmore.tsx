@@ -1,3 +1,5 @@
+import { Features } from "./featuers";
+
 export default function Learnmore() {
   return (
     <main
@@ -12,6 +14,9 @@ export default function Learnmore() {
           >
             ليش أستخدم حصادي؟
           </h1>
+        </div>
+        <div>
+          <Features />
         </div>
       </section>
     </main>
