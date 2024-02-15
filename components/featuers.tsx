@@ -1,3 +1,4 @@
+import image from "next/image";
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -6,9 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import image from "../assets/growth.png";
-// import image3 from "../assets/reflecting.png";
-// import image4 from "../assets/looking-ahead.png";
 
 interface FeatureProps {
   title: string;
@@ -21,25 +19,25 @@ const features: FeatureProps[] = [
     title: "نظام يحسب لك أرباحك ",
     description:
       "وداعاً للعمليات الحسابية المعقدة! سيساعدك نظامنا على حساب أرباحك المتوقعة من الأسهم بدقة وسهولة.",
-    featureImage: "image4",
+    featureImage: "/assets/Calculator.svg",
   },
   {
     title: "معرفة معدل الأرباح والخسائر",
     description:
       "تقدر تراقب أداء شركاتك المُستثمر فيها بدقة، مع متابعة لمعدل الأرباح والخسائر بشكل مباشر.",
-    featureImage: "image3",
+    featureImage: "/assets/Finance.svg",
   },
   {
     title: "حاسبة القروض",
     description:
       "خلاص انسى هم القروض! حصادي يساعدك تحسب أقساط القرض وفوائده بدقة، ويسهل عليك التخطيط المالي.",
-    featureImage: "image",
+    featureImage: "/assets/Manage money.svg",
   },
   {
     title: "تحويل العملات",
     description:
       "نقدم لك خدمة تحويل العملات بسهولة وسرعة، مع أسعار صرف مُحدثة لحظة بلحظة.",
-    featureImage: "image",
+    featureImage: "/assets/Currency.svg",
   },
 ];
 
@@ -87,11 +85,11 @@ export const Features = () => {
             <CardContent className=" text-lg">{description}</CardContent>
 
             <CardFooter>
-              {/* <Image
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              /> */}
+              <img
+                src={featureImage}
+                alt="About features"
+                className="w-[200px] lg:w-[270px] mx-auto"
+              />
             </CardFooter>
           </Card>
         ))}
