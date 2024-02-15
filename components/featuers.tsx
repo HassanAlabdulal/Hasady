@@ -20,25 +20,25 @@ const features: FeatureProps[] = [
   {
     title: "نظام يحسب لك أرباحك ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "وداعاً للعمليات الحسابية المعقدة! سيساعدك نظامنا على حساب أرباحك المتوقعة من الأسهم بدقة وسهولة.",
     featureImage: "image4",
   },
   {
-    title: "Intuitive user interface",
+    title: "معرفة معدل الأرباح والخسائر",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "تقدر تراقب أداء شركاتك المُستثمر فيها بدقة، مع متابعة لمعدل الأرباح والخسائر بشكل مباشر.",
     featureImage: "image3",
   },
   {
-    title: "AI-Powered insights",
+    title: "حاسبة القروض",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "خلاص انسى هم القروض! حصادي يساعدك تحسب أقساط القرض وفوائده بدقة، ويسهل عليك التخطيط المالي.",
     featureImage: "image",
   },
   {
-    title: "h",
+    title: "تحويل العملات",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "نقدم لك خدمة تحويل العملات بسهولة وسرعة، مع أسعار صرف مُحدثة لحظة بلحظة.",
     featureImage: "image",
   },
 ];
@@ -55,9 +55,9 @@ export const Features = () => {
   return (
     <section id="features" className="container py-24 sm:py-32 space-y-8">
       <h2 className="text-3xl lg:text-4xl flex items-center justify-center gap-2 font-bold md:text-center">
-        مزايا
+        وداعاً للقلق، أهلاً
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          عديدة
+          بالراحة !
         </span>
       </h2>
 
