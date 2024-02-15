@@ -53,8 +53,8 @@ const featureList: string[] = [
 
 export const Features = () => {
   return (
-    <section id="features" className="container py-24 sm:py-32 space-y-8">
-      <h2 className="text-3xl lg:text-4xl flex items-center justify-center gap-2 font-bold md:text-center">
+    <section id="features" className="container py-16 space-y-8">
+      <h2 className="text-2xl lg:text-3xl flex items-center justify-center gap-2 font-bold md:text-center">
         وداعاً للقلق، أهلاً
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           بالراحة !
@@ -64,7 +64,10 @@ export const Features = () => {
       <div className="flex flex-wrap justify-center gap-4">
         {featureList.map((feature: string) => (
           <div key={feature}>
-            <Badge variant="secondary" className="text-sm">
+            <Badge
+              variant="secondary"
+              className="md:text-md text-sm bg-[#d0b880] hover:bg-[#d0b880]/90"
+            >
               {feature}
             </Badge>
           </div>
@@ -75,13 +78,13 @@ export const Features = () => {
         {features.map(({ title, description, featureImage }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-[#ecf4fa] hover:bg-[#f7f7f7] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all duration-200 shadow-sm hover:shadow-md"
           >
             <CardHeader>
-              <CardTitle className=" text-center ">{title}</CardTitle>
+              <CardTitle className=" text-center  ">{title}</CardTitle>
             </CardHeader>
 
-            <CardContent>{description}</CardContent>
+            <CardContent className=" text-lg">{description}</CardContent>
 
             <CardFooter>
               {/* <Image
