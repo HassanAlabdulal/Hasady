@@ -72,17 +72,19 @@ export const Features = () => {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
         {features.map(({ title, description, featureImage }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
+            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
           >
             <CardHeader>
-              <CardTitle className=" text-center  ">{title}</CardTitle>
+              <CardTitle className=" text-center ">{title}</CardTitle>
             </CardHeader>
 
-            <CardContent className=" text-lg">{description}</CardContent>
+            <CardContent className=" text-lg text-center">
+              {description}
+            </CardContent>
 
             <CardFooter>
               <img
