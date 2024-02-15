@@ -44,15 +44,11 @@ const features: FeatureProps[] = [
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "أمان مالي",
+  "استثمار ذكي",
+  "رؤية استراتيجية",
+  "تنبؤات دقيقة",
+  " نمو سريع",
 ];
 
 export const Features = () => {
@@ -65,7 +61,7 @@ export const Features = () => {
         </span>
       </h2>
 
-      <div className="flex flex-wrap md:justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {featureList.map((feature: string) => (
           <div key={feature}>
             <Badge variant="secondary" className="text-sm">
