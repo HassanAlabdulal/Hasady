@@ -78,7 +78,7 @@ export const Features = () => {
         {features.map(({ title, description, featureImage }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all duration-200 shadow-sm hover:shadow-md rounded-2xl"
           >
             <CardHeader>
               <CardTitle className=" text-center  ">{title}</CardTitle>
