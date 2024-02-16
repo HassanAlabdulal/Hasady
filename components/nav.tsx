@@ -170,7 +170,7 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 backgroundColor"
+               rounded-2xl gap-5 text-lg text-black text-center shadow-md py-6 mt-4 ml-5 bg-slate-100"
             >
               <a className="my-2 font-semibold w-5/6 " href="/">
                 معدل الأرباح
@@ -184,7 +184,7 @@ export default function Nav() {
               <a className="my-2 font-semibold w-5/6" href="/">
                 تحويل العملات
               </a>
-              <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
+              <Button className=" rounded-2xl text-md w-5/6 shadow-2xl bg-[#bfa260] text-white font-bold ">
                 تسجيل الدخول
               </Button>
             </motion.div>
