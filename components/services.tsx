@@ -1,75 +1,101 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-// import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import image from "next/image";
+import { Badge } from "./ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-interface ServiceProps {
+interface FeatureProps {
   title: string;
   description: string;
-  icon: string;
+  featureImage: string;
 }
 
-const serviceList: ServiceProps[] = [
+const features: FeatureProps[] = [
   {
-    title: "Code Collaboration",
+    title: " استثمر بذكاء وحقق أرباح خيالية ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: "",
+      "وداعاً للعمليات الحسابية المعقدة! يساعدك نظامنا على حساب أرباحك المتوقعة من الأسهم بدقة وسهولة.",
+    featureImage: "/assets/Calculator.svg",
   },
   {
-    title: "Project Management",
+    title: " اعرف أرباحك وخسائرك بدقة",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: "",
+      "تقدر تراقب أداء شركاتك المُستثمر فيها بدقة، مع متابعة لمعدل الأرباح والخسائر بشكل مباشر.",
+    featureImage: "/assets/Finance.svg",
   },
   {
-    title: "Task Automation",
+    title: " خطط لسداد قروضك بسهولة",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: "",
+      "خلاص انسى هم القروض! حصادي يساعدك تحسب أقساط القرض وفوائده بدقة، ويسهل عليك التخطيط المالي.",
+    featureImage: "/assets/Manage money.svg",
+  },
+  {
+    title: " أسعار صرف العملات لحظة بلحظة",
+    description:
+      "نقدم لك خدمة تحويل العملات بسهولة وسرعة، مع أسعار صرف مُحدثة لحظة بلحظة.",
+    featureImage: "/assets/Currency.svg",
   },
 ];
 
-export const Services = () => {
+const featureList: string[] = [
+  "أمان مالي",
+  "استثمار ذكي",
+  "رؤية استراتيجية",
+  "تنبؤات دقيقة",
+  " نمو سريع",
+];
+
+export default function Services() {
   return (
-    <section className="container py-24 sm:py-32">
-      <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
-            </span>
-            Services
-          </h2>
+    <section id="features" className="container py-16 space-y-8">
+      {/* <h2 className="text-4xl md:text-6xl flex items-center justify-center gap-2 font-extrabold md:text-center">
+        وداعاً للقلق، أهلاً
+        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          بالراحة !
+        </span>
+      </h2> */}
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
-          </p>
-
-          <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
-              <Card key={title}>
-                <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
-                  <div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
-                      {description}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
+      <div className="flex flex-wrap justify-center gap-4">
+        {featureList.map((feature: string) => (
+          <div key={feature}>
+            <Badge
+              variant="secondary"
+              className="md:text-md text-sm bg-[#d0b880] hover:bg-[#d0b880]/90"
+            >
+              {feature}
+            </Badge>
           </div>
-        </div>
+        ))}
+      </div>
 
-        <img
-          src=""
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
-          alt="About services"
-        />
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+        {features.map(({ title, description, featureImage }: FeatureProps) => (
+          <Card
+            key={title}
+            className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
+          >
+            <CardHeader>
+              <CardTitle className=" text-center ">{title}</CardTitle>
+            </CardHeader>
+
+            <CardContent className=" text-lg text-center">
+              {description}
+            </CardContent>
+
+            <CardFooter>
+              <img
+                src={featureImage}
+                alt="About features"
+                className="w-[200px] lg:w-[270px] mx-auto"
+              />
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </section>
   );
-};
+}

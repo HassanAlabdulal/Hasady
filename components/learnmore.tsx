@@ -1,5 +1,4 @@
-import { Features } from "./featuers";
-import { Services } from "./services";
+import Services from "./services";
 
 export default function Learnmore() {
   return (
@@ -26,7 +25,7 @@ export default function Learnmore() {
           </h2>
         </div>
         <div>
-          <Features />
+          <Services />
         </div>
       </section>
     </main>
