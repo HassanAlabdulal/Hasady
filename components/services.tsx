@@ -11,7 +11,7 @@ import {
 interface FeatureProps {
   title: string;
   description: string;
-  featureImage: string;
+  serviceImage: string;
 }
 
 const features: FeatureProps[] = [
@@ -19,25 +19,25 @@ const features: FeatureProps[] = [
     title: " استثمر بذكاء وحقق أرباح خيالية ",
     description:
       "وداعاً للعمليات الحسابية المعقدة! يساعدك نظامنا على حساب أرباحك المتوقعة من الأسهم بدقة وسهولة.",
-    featureImage: "/assets/Calculator.svg",
+    serviceImage: "/assets/Calculator.svg",
   },
   {
     title: " اعرف أرباحك وخسائرك بدقة",
     description:
       "تقدر تراقب أداء شركاتك المُستثمر فيها بدقة، مع متابعة لمعدل الأرباح والخسائر بشكل مباشر.",
-    featureImage: "/assets/Finance.svg",
+    serviceImage: "/assets/Finance.svg",
   },
   {
     title: " خطط لسداد قروضك بسهولة",
     description:
       "خلاص انسى هم القروض! حصادي يساعدك تحسب أقساط القرض وفوائده بدقة، ويسهل عليك التخطيط المالي.",
-    featureImage: "/assets/Manage money.svg",
+    serviceImage: "/assets/Manage money.svg",
   },
   {
     title: " أسعار صرف العملات لحظة بلحظة",
     description:
       "نقدم لك خدمة تحويل العملات بسهولة وسرعة، مع أسعار صرف مُحدثة لحظة بلحظة.",
-    featureImage: "/assets/Currency.svg",
+    serviceImage: "/assets/Currency.svg",
   },
 ];
 
@@ -51,7 +51,7 @@ const featureList: string[] = [
 
 export default function Services() {
   return (
-    <section id="features" className="container py-16 space-y-8">
+    <section id="services" className="container py-16 space-y-8">
       {/* <h2 className="text-4xl md:text-6xl flex items-center justify-center gap-2 font-extrabold md:text-center">
         وداعاً للقلق، أهلاً
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -73,7 +73,7 @@ export default function Services() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
-        {features.map(({ title, description, featureImage }: FeatureProps) => (
+        {features.map(({ title, description, serviceImage }: FeatureProps) => (
           <Card
             key={title}
             className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
@@ -88,7 +88,7 @@ export default function Services() {
 
             <CardFooter>
               <img
-                src={featureImage}
+                src={serviceImage}
                 alt="About features"
                 className="w-[200px] lg:w-[270px] mx-auto"
               />
