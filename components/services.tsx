@@ -8,13 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-interface FeatureProps {
+interface ServiceProps {
   title: string;
   description: string;
   serviceImage: string;
 }
 
-const features: FeatureProps[] = [
+const services: ServiceProps[] = [
   {
     title: " استثمر بذكاء وحقق أرباح خيالية ",
     description:
@@ -41,7 +41,7 @@ const features: FeatureProps[] = [
   },
 ];
 
-const featureList: string[] = [
+const serviceList: string[] = [
   "أمان مالي",
   "استثمار ذكي",
   "رؤية استراتيجية",
@@ -60,20 +60,20 @@ export default function Services() {
       </h2> */}
 
       <div className="flex flex-wrap justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
+        {serviceList.map((service: string) => (
+          <div key={service}>
             <Badge
               variant="secondary"
               className="md:text-md text-sm bg-[#d0b880] hover:bg-[#d0b880]/90"
             >
-              {feature}
+              {service}
             </Badge>
           </div>
         ))}
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
-        {features.map(({ title, description, serviceImage }: FeatureProps) => (
+        {services.map(({ title, description, serviceImage }: ServiceProps) => (
           <Card
             key={title}
             className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
@@ -89,7 +89,7 @@ export default function Services() {
             <CardFooter>
               <img
                 src={serviceImage}
-                alt="About features"
+                alt="About services"
                 className="w-[200px] lg:w-[270px] mx-auto"
               />
             </CardFooter>
