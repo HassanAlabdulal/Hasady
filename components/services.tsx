@@ -71,7 +71,7 @@ export default function Services() {
             key={title}
             className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
           >
-            <CardHeader>
+            <CardHeader className="mt-4">
               <CardTitle className=" text-center ">{title}</CardTitle>
             </CardHeader>
 
