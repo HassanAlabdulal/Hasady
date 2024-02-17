@@ -22,7 +22,7 @@ export const MedalIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-14 fill-primary"
+      className="w-14 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_8" data-name="Layer 8">
@@ -100,7 +100,7 @@ export const MapIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-14 fill-primary"
+      className="w-14 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_45" data-name="Layer 45">
@@ -174,7 +174,7 @@ export const PlaneIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-14 fill-primary"
+      className="w-14 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_4" data-name="Layer 4">
@@ -232,7 +232,7 @@ export const GiftIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-14 fill-primary"
+      className="w-14 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_14" data-name="Layer 14">
@@ -330,7 +330,7 @@ export const LightBulbIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-12 fill-primary"
+      className="w-12 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_49" data-name="Layer 49">
@@ -404,7 +404,7 @@ export const WalletIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-12 fill-primary"
+      className="w-12 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_21" data-name="Layer 21">
@@ -494,7 +494,7 @@ export const ChartIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-12 fill-primary"
+      className="w-12 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_10" data-name="Layer 10">
@@ -564,7 +564,7 @@ export const MagnifierIcon = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      className="w-12 fill-primary"
+      className="w-12 fill-[#bfa260]"
     >
       <title>Free Icons</title>
       <g id="Layer_46" data-name="Layer 46">

@@ -56,7 +56,7 @@ export default function Features() {
             <div className="flex flex-col gap-8">
               {serviceList.map(({ icon, title, description }: ServiceProps) => (
                 <Card key={title} className="bg-[#f7f7f7] shadow-md">
-                  <CardHeader className="flex md:flex-row justify-start items-start gap-4 max-sm:gap-0">
+                  <CardHeader className="flex md:flex-row md:justify-start justify-center md:items-start items-center gap-4">
                     <div className=" p-1 rounded-2xl ">{icon}</div>
                     <div>
                       <CardTitle className="max-sm:text-center">
