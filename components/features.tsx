@@ -15,12 +15,12 @@ const serviceList: ServiceProps[] = [
     icon: "",
   },
   {
-    title: "سهولة الاستخدام",
+    title: "استخدامنا سهل",
     description: "ما فيه تعقيد، ولا لف ودوران، استخدامنا سهل زي شربة الماي!",
     icon: "",
   },
   {
-    title: "واجهة بسيطة",
+    title: "واجهتنا بسيطة",
     description: "واجهتنا ما تضيعك، كل حاجة قدام عينك، الاستخدام سهل وسلس!",
     icon: "",
   },
@@ -66,7 +66,7 @@ export default function Features() {
           </div>
 
           <img
-            src=""
+            src="/assets/featuers.svg"
             className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
             alt="About services"
           />
