@@ -2,7 +2,7 @@ import image from "next/image";
 import { Badge } from "./ui/badge";
 import {
   Card,
-  CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -75,9 +75,9 @@ export default function Services() {
               <CardTitle className=" text-center ">{title}</CardTitle>
             </CardHeader>
 
-            <CardContent className=" text-lg text-center">
+            <CardDescription className=" text-lg text-center mx-4">
               {description}
-            </CardContent>
+            </CardDescription>
 
             <CardFooter>
               <img
