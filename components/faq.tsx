@@ -13,34 +13,40 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "هل يحتاج استخدام الموقع تسجيل أو اشتراك؟",
+    answer:
+      "لا، ما يحتاج! تقدر تستخدم حاسباتنا مباشرة بدون أي تسجيل أو تعقيدات. بس ترى هاا .. ما بتنحفظ حساباتك 🤷🏻‍♂️",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "كيف أحفظ حساباتي؟",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "في هالحالة، تحتاج تسجل حساب عشان تخزن كل شيء وما تضطر تعبي المعلومات كل مرة.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+    question: "كيف أقدر أستخدم حاسبة الأسهم في حصادي؟",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "أمرها سهل! بس ادخل الحاسبة وحط اسم الشركة اللي استثمرت فيها، وسعر الشراء والبيع، وحنا بنحسب لك الأرباح بعد العمولة والضريبة.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "هل ممكن يكون فيه أخطاء في أسعار العملات؟",
+    answer:
+      "نحرص دايمًا أن نقدم لك أحدث وأدق الأسعار، بس دايمًا تأكد من الأسعار قبل ما تسوي أي عمليات مالية، لأن السوق يتغير كل ثانية.",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+    question: "هل تقدمون نصائح استثمارية أو مالية؟",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "لا، حصادي ما يقدم نصائح استثمارية، بس نساعدك تحسب وتنظم أمورك المالية بنفسك.",
     value: "item-5",
+  },
+  {
+    question: "إذا عندي سؤال أو مشكلة، كيف أقدر أتواصل معكم؟",
+    answer:
+      "تقدر تتواصل معانا عبر صفحة اتصل بنا، واحنا موجودين نساعدك على طول.",
+    value: "item-6",
   },
 ];
 
