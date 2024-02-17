@@ -1,10 +1,12 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 // import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ServiceProps {
   title: string;
   description: string;
-  icon: string;
+  icon: JSX.Element;
 }
 
 const serviceList: ServiceProps[] = [
@@ -12,17 +14,17 @@ const serviceList: ServiceProps[] = [
     title: "نوفر وقتك",
     description:
       "وقتك غالي عندنا، نوفر لك الوقت بخدماتنا اللي تخلص شغلك في طرفة عين!",
-    icon: "",
+    icon: <FontAwesomeIcon className="text-[#d0b880]" icon={faHourglassHalf} />,
   },
   {
     title: "استخدامنا سهل",
     description: "ما فيه تعقيد، ولا لف ودوران، استخدامنا سهل زي شربة الماي!",
-    icon: "",
+    icon: <FontAwesomeIcon className="fill-primary" icon={faHourglassHalf} />,
   },
   {
     title: "واجهتنا بسيطة",
     description: "واجهتنا ما تضيعك، كل حاجة قدام عينك، الاستخدام سهل وسلس!",
-    icon: "",
+    icon: <FontAwesomeIcon className="fill-primary" icon={faHourglassHalf} />,
   },
 ];
 
@@ -40,7 +42,6 @@ export default function Features() {
                 مميزاتنا
               </span>
             </h2>
-
             <p className="text-muted-foreground text-xl mt-4 mb-8 max-sm:text-center">
               حصادي هو الحل الأمثل لإدارة استثماراتك بذكاء وتحقيق أهدافك
               المالية.

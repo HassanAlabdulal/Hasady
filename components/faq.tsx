@@ -51,7 +51,7 @@ export const FAQ = () => {
         <div className="">
           <h2
             className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
-              md:leading-normal leading-loose	 tracking-tight mb-4"
+              md:leading-normal leading-loose tracking-tight mb-4"
           >
             الأسئلة
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
