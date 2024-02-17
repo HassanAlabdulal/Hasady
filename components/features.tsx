@@ -4,6 +4,7 @@ import {
   faHourglassHalf,
   faStopwatch,
 } from "@fortawesome/free-solid-svg-icons";
+import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "./icons";
 
 interface ServiceProps {
   title: string;
@@ -16,19 +17,17 @@ const serviceList: ServiceProps[] = [
     title: "نوفر وقتك",
     description:
       "وقتك غالي عندنا، نوفر لك الوقت بخدماتنا اللي تخلص شغلك في طرفة عين!",
-    icon: (
-      <FontAwesomeIcon className="text-3xl text-[#bfa260]" icon={faStopwatch} />
-    ),
+    icon: <MedalIcon />,
   },
   {
     title: "استخدامنا سهل",
     description: "ما فيه تعقيد، ولا لف ودوران، استخدامنا سهل زي شربة الماي!",
-    icon: <FontAwesomeIcon className="fill-primary" icon={faStopwatch} />,
+    icon: <MedalIcon />,
   },
   {
     title: "واجهتنا بسيطة",
     description: "واجهتنا ما تضيعك، كل حاجة قدام عينك، الاستخدام سهل وسلس!",
-    icon: <FontAwesomeIcon className="fill-primary" icon={faHourglassHalf} />,
+    icon: <MedalIcon />,
   },
 ];
 
