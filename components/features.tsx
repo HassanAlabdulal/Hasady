@@ -1,9 +1,4 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHourglassHalf,
-  faStopwatch,
-} from "@fortawesome/free-solid-svg-icons";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "./icons";
 
 interface ServiceProps {
