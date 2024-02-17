@@ -29,7 +29,7 @@ const serviceList: ServiceProps[] = [
 export default function Features() {
   return (
     <main className="flex justify-center items-center bg-[#f9f9f9]">
-      <section className="container py-24 sm:py-32 ">
+      <section className="container py-12 sm:py-32 ">
         <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
           <div>
             <h2
