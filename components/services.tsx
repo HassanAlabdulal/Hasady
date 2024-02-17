@@ -16,7 +16,7 @@ interface ServiceProps {
 
 const services: ServiceProps[] = [
   {
-    title: " استثمر بذكاء وحقق أرباح خيالية ",
+    title: "دوّن استثمارك وحقق أرباح خيالية ",
     description:
       "حاسبتنا تساعدك تتابع استثماراتك بالأسهم بكل سهولة. حط اسم الشركة وتكاليفك، وخلينا نوريك الأرباح المتوقعة بعد العمولات والضرائب!",
     serviceImage: "/assets/Calculator.svg",
@@ -35,7 +35,7 @@ const services: ServiceProps[] = [
     serviceImage: "/assets/Manage money.svg",
   },
   {
-    title: " أسعار الصرف لحظة بلحظة",
+    title: " راقب الصرف لحظة بلحظة",
     description: " اعرف قيمة ريالك حول العالم! بسرعة وسهولة . ",
     serviceImage: "/assets/Currency.svg",
   },
@@ -46,7 +46,7 @@ const serviceList: string[] = [
   "استثمار ذكي",
   "رؤية استراتيجية",
   "تنبؤات دقيقة",
-  " نمو سريع",
+  " تخطيط سهل",
 ];
 
 export default function Services() {
