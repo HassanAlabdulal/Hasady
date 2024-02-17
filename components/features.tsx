@@ -1,5 +1,13 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "./icons";
+import {
+  MedalIcon,
+  MapIcon,
+  PlaneIcon,
+  GiftIcon,
+  MagnifierIcon,
+  WalletIcon,
+  ChartIcon,
+} from "./icons";
 
 interface ServiceProps {
   title: string;
@@ -17,12 +25,12 @@ const serviceList: ServiceProps[] = [
   {
     title: "استخدامنا سهل",
     description: "ما فيه تعقيد، ولا لف ودوران، استخدامنا سهل زي شربة الماي!",
-    icon: <MedalIcon />,
+    icon: <ChartIcon />,
   },
   {
     title: "واجهتنا بسيطة",
     description: "واجهتنا ما تضيعك، كل حاجة قدام عينك، الاستخدام سهل وسلس!",
-    icon: <MedalIcon />,
+    icon: <PlaneIcon />,
   },
 ];
 
