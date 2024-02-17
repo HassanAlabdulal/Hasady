@@ -1,7 +1,9 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-// import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHourglassHalf,
+  faStopwatch,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface ServiceProps {
   title: string;
@@ -14,12 +16,14 @@ const serviceList: ServiceProps[] = [
     title: "نوفر وقتك",
     description:
       "وقتك غالي عندنا، نوفر لك الوقت بخدماتنا اللي تخلص شغلك في طرفة عين!",
-    icon: <FontAwesomeIcon className="text-[#d0b880]" icon={faHourglassHalf} />,
+    icon: (
+      <FontAwesomeIcon className="text-3xl text-[#bfa260]" icon={faStopwatch} />
+    ),
   },
   {
     title: "استخدامنا سهل",
     description: "ما فيه تعقيد، ولا لف ودوران، استخدامنا سهل زي شربة الماي!",
-    icon: <FontAwesomeIcon className="fill-primary" icon={faHourglassHalf} />,
+    icon: <FontAwesomeIcon className="fill-primary" icon={faStopwatch} />,
   },
   {
     title: "واجهتنا بسيطة",
