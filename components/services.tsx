@@ -52,13 +52,6 @@ const serviceList: string[] = [
 export default function Services() {
   return (
     <section id="services" className="container py-16 space-y-8">
-      {/* <h2 className="text-4xl md:text-6xl flex items-center justify-center gap-2 font-extrabold md:text-center">
-        وداعاً للقلق، أهلاً
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          بالراحة !
-        </span>
-      </h2> */}
-
       <div className="flex flex-wrap justify-center gap-4">
         {serviceList.map((service: string) => (
           <div key={service}>

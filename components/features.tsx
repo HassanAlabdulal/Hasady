@@ -1,13 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import {
-  MedalIcon,
-  MapIcon,
-  PlaneIcon,
-  GiftIcon,
-  MagnifierIcon,
-  WalletIcon,
-  ChartIcon,
-} from "./icons";
+import { MedalIcon, MagnifierIcon, ChartIcon } from "./icons";
 
 interface ServiceProps {
   title: string;
