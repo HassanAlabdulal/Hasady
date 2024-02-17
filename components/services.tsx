@@ -36,7 +36,7 @@ const services: ServiceProps[] = [
   },
   {
     title: " راقب الصرف لحظة بلحظة",
-    description: " اعرف قيمة ريالك حول العالم! بسرعة وسهولة . ",
+    description: " اعرف قيمة ريالك حول العالم! بسرعة وسهولة. ",
     serviceImage: "/assets/Currency.svg",
   },
 ];
