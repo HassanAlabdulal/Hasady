@@ -48,15 +48,17 @@ export const FAQ = () => {
   return (
     <main className="flex justify-center items-center bg-[#f9f9f9]">
       <section id="faq" className="container py-12 sm:py-32">
-        <h2
-          className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
-              md:leading-tight tracking-tight mb-4"
-        >
-          الأسئلة
-          <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-            الشائعة
-          </span>
-        </h2>
+        <div className="">
+          <h2
+            className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
+              md:leading-normal	 tracking-tight mb-4"
+          >
+            الأسئلة
+            <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+              الشائعة
+            </span>
+          </h2>
+        </div>
 
         <Accordion type="single" collapsible className="w-full AccordionRoot">
           {FAQList.map(({ question, answer, value }: FAQProps) => (
