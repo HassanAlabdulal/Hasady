@@ -8,6 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 interface ServiceProps {
   title: string;
   description: string;
@@ -50,6 +54,11 @@ const serviceList: string[] = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <section id="services" className="container py-16 space-y-8">
       <div className="flex flex-wrap justify-center gap-4">
@@ -68,6 +77,7 @@ export default function Services() {
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
         {services.map(({ title, description, serviceImage }: ServiceProps) => (
           <Card
+            data-aos="fade-right"
             key={title}
             className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
           >
