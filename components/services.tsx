@@ -69,6 +69,7 @@ export default function Services() {
         {serviceList.map((service: string) => (
           <div key={service}>
             <Badge
+              data-aos="fade-up"
               variant="secondary"
               className="md:text-md text-sm bg-[#d0b880] hover:bg-[#d0b880]/90"
             >
