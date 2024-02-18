@@ -8,12 +8,6 @@ export default function Learnmore() {
     >
       <section className="pt-32 md:pt-36 ">
         <div>
-          {/* <h1
-            className="text-black md:text-6xl font-extrabold md:leading-tight 
-       tracking-tight text-4xl text-center"
-          >
-            ليش أستخدم حصادي؟
-          </h1> */}
           <h2
             className="text-3xl md:text-7xl flex items-center justify-center gap-2 font-extrabold
              md:text-center md:leading-tight tracking-tight"
