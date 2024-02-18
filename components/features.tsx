@@ -1,5 +1,8 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MagnifierIcon, ChartIcon } from "./icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 interface ServiceProps {
   title: string;
@@ -27,6 +30,12 @@ const serviceList: ServiceProps[] = [
 ];
 
 export default function Features() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <main className="flex justify-center items-center bg-[#f9f9f9]">
       <section className="container py-12 sm:py-32 ">
