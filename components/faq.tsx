@@ -4,6 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 interface FAQProps {
   question: string;
@@ -69,6 +72,11 @@ const FAQList: FAQProps[] = [
 ];
 
 export const FAQ = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+    });
+  }, []);
   return (
     <main className="flex justify-center items-center bg-[#f9f9f9]">
       <section id="faq" className="container py-12 sm:py-32">
@@ -76,6 +84,7 @@ export const FAQ = () => {
           <h2
             className="text-3xl md:text-5xl flex items-center max-sm:justify-center gap-3 font-extrabold
               md:leading-normal leading-loose tracking-tight mb-4"
+            data-aos="fade-up"
           >
             الأسئلة
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -86,7 +95,7 @@ export const FAQ = () => {
 
         <Accordion type="single" collapsible className="w-full AccordionRoot">
           {FAQList.map(({ question, answer, value }: FAQProps) => (
-            <AccordionItem key={value} value={value}>
+            <AccordionItem key={value} value={value} data-aos="fade-up">
               <AccordionTrigger className="text-left">
                 {question}
               </AccordionTrigger>
@@ -96,7 +105,7 @@ export const FAQ = () => {
           ))}
         </Accordion>
 
-        <h3 className="font-medium mt-4 flex gap-1">
+        <h3 className="font-medium mt-4 flex gap-1" data-aos="fade-up">
           عندك أسئلة زيادة؟
           <a
             href="#"
