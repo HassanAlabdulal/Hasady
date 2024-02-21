@@ -96,7 +96,7 @@ export const FAQ = () => {
         <Accordion type="single" collapsible className="w-full AccordionRoot">
           {FAQList.map(({ question, answer, value }: FAQProps) => (
             <AccordionItem key={value} value={value} data-aos="fade-up">
-              <AccordionTrigger className="text-left">
+              <AccordionTrigger className="text-right max-sm:text-sm text-lg">
                 {question}
               </AccordionTrigger>
 
@@ -105,7 +105,7 @@ export const FAQ = () => {
           ))}
         </Accordion>
 
-        <h3 className="font-medium mt-4 flex gap-1" data-aos="fade-up">
+        <h3 className="font-medium mt-4 flex gap-2" data-aos="fade-up">
           عندك أسئلة زيادة؟
           <a
             href="#"
