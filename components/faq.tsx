@@ -95,21 +95,28 @@ export const FAQ = () => {
 
         <Accordion type="single" collapsible className="w-full AccordionRoot">
           {FAQList.map(({ question, answer, value }: FAQProps) => (
-            <AccordionItem key={value} value={value} data-aos="fade-up">
-              <AccordionTrigger className="text-right max-sm:text-sm text-lg">
+            <AccordionItem
+              className="hover:bg-[#f1f1f1]"
+              key={value}
+              value={value}
+              data-aos="fade-up"
+            >
+              <AccordionTrigger className="text-right max-sm:text-sm text-xl">
                 {question}
               </AccordionTrigger>
 
-              <AccordionContent>{answer}</AccordionContent>
+              <AccordionContent className="md:text-lg text-sm text-muted-foreground">
+                {answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <h3 className="font-medium mt-4 flex gap-2" data-aos="fade-up">
+        <h3 className="font-medium text-lg mt-4 flex gap-2 " data-aos="fade-up">
           عندك أسئلة زيادة؟
           <a
             href="#"
-            className="text-primary transition-all border-primary hover:border-b-2"
+            className="text-[#bfa260] transition-all cursor-pointer border-[#bfa260] hover:border-b-2"
           >
             تواصل معنا
           </a>
