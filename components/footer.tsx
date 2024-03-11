@@ -1,26 +1,40 @@
+import Image from "next/image";
+
 export const Footer = () => {
   return (
-    <footer id="footer">
+    <footer className="bg-[#f9f9f9]">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container grid grid-cols-2 py-20 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      <section className="container  grid grid-cols-2 py-20 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
-          <a href="/" className="flex text-xl font-bold">
-            دورة الإمام المنتظر
+          <a href="/" className="flex text-2xl font-bold">
+            <Image
+              src="/assets/logo.svg"
+              width={50}
+              height={50}
+              className="w-4 h-auto md:w-7"
+              alt="logo"
+            />
+            حصادي
           </a>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-bold">عن الدورة</h3>
+          <h3 className="text-lg font-bold">عنّا</h3>
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
-              من نحن؟
+              الخدمات
             </a>
           </div>
 
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
-              موقع الدورة
+              المميزات
+            </a>
+          </div>
+          <div>
+            <a href="#" className="opacity-60 hover:opacity-100">
+              الأسئلة الشائعة
             </a>
           </div>
         </div>
@@ -35,7 +49,7 @@ export const Footer = () => {
 
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
-              انستقرام
+              لنكدن
             </a>
           </div>
         </div>
@@ -45,7 +59,7 @@ export const Footer = () => {
 
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
-              البريد الإلكتروني
+              hasady@gmail.com
             </a>
           </div>
         </div>
