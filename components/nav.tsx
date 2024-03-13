@@ -184,7 +184,7 @@ export default function Nav() {
               <a className="my-2 font-semibold w-5/6" href="/">
                 تحويل العملات
               </a>
-              <Button className=" rounded-2xl text-md w-5/6 shadow-2xl bg-[#bfa260] text-white font-bold ">
+              <Button className=" rounded-full text-md w-5/6 shadow-2xl bg-black text-white font-bold ">
                 تسجيل الدخول
               </Button>
             </motion.div>
@@ -197,7 +197,7 @@ export default function Nav() {
           initial={{ opacity: 0, x: -20 }}
           transition={{ delay: 0.25 }}
         >
-          <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
+          <Button className=" rounded-full px-5 shadow-2xl bg-black font-bold hover:bg-neutral-800">
             تسجيل الدخول
           </Button>
           {/* <ModeToggle /> */}
