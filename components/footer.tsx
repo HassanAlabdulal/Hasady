@@ -47,21 +47,6 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        {/* <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-bold">تابعنا </h3>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              اكس
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              لنكدن
-            </a>
-          </div>
-        </div> */}
 
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">تواصل معنا</h3>
@@ -74,21 +59,21 @@ export const Footer = () => {
           <section className=" flex items-center gap-3">
             <a
               href="https://twitter.com/7assan_abdulaal"
-              className="text-xl"
+              className="text-xl transition-all duration-300 hover:scale-110"
               target="_blank"
             >
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a
               href="https://github.com/HassanAlabdulal"
-              className="text-xl"
+              className="text-xl transition-all duration-300 hover:scale-110"
               target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href="https://www.linkedin.com/in/hassan-alabdulal/"
-              className="text-xl"
+              className="text-xl transition-all duration-300 hover:scale-105"
               target="_blank"
             >
               <FontAwesomeIcon icon={faLinkedin} />
