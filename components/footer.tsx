@@ -31,18 +31,27 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">عن حصادي</h3>
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               الخدمات
             </a>
           </div>
 
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               المميزات
             </a>
           </div>
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               الأسئلة الشائعة
             </a>
           </div>
@@ -51,18 +60,27 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">الحاسبات </h3>
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               حاسبة الأسهم
             </a>
           </div>
 
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               حاسبة القروض
             </a>
           </div>
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               حاسبة العملات
             </a>
           </div>
@@ -72,7 +90,10 @@ export const Footer = () => {
           <h3 className="text-lg font-bold">تواصل معنا</h3>
 
           <div>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <a
+              href="#"
+              className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
+            >
               hasady@gmail.com
             </a>
           </div>
@@ -104,7 +125,7 @@ export const Footer = () => {
 
       <main className="container text-center pb-14">
         <h3 className="flex items-center justify-center gap-1 text-sm md:text-base text-muted-foreground ">
-          جميع الحقوق محفوظة، حصادي &copy; ٢٠٢٤
+          جميع الحقوق محفوظة لفريق حصادي &copy; ٢٠٢٤
         </h3>
       </main>
     </footer>
