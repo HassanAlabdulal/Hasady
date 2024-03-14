@@ -59,21 +59,21 @@ export const Footer = () => {
           <section className=" flex items-center gap-3">
             <a
               href="https://twitter.com/7assan_abdulaal"
-              className="text-xl transition-all duration-300 hover:scale-110"
+              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a
               href="https://github.com/HassanAlabdulal"
-              className="text-xl transition-all duration-300 hover:scale-110"
+              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href="https://www.linkedin.com/in/hassan-alabdulal/"
-              className="text-xl transition-all duration-300 hover:scale-105"
+              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faLinkedin} />
