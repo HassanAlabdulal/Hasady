@@ -2,6 +2,14 @@
 
 import Image from "next/image";
 
+const scrollToElement = (elementId: string) => {
+  const targetedElement = document.getElementById(elementId);
+
+  if (targetedElement) {
+    targetedElement.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXTwitter,
@@ -31,29 +39,29 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">عن حصادي</h3>
           <div>
-            <a
-              href="#"
+            <button
+              onClick={() => scrollToElement("learnmore")}
               className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
             >
               الخدمات
-            </a>
+            </button>
           </div>
 
           <div>
-            <a
-              href="#"
+            <button
+              onClick={() => scrollToElement("features")}
               className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
             >
               المميزات
-            </a>
+            </button>
           </div>
           <div>
-            <a
-              href="#"
+            <button
+              onClick={() => scrollToElement("faq")}
               className="opacity-60 hover:opacity-100 hover:mr-1 transition-all duration-300"
             >
               الأسئلة الشائعة
-            </a>
+            </button>
           </div>
         </div>
 
