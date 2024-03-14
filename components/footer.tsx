@@ -1,4 +1,13 @@
+"use client";
+
 import Image from "next/image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXTwitter,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
   return (
@@ -12,7 +21,7 @@ export const Footer = () => {
               src="/assets/logo.svg"
               width={50}
               height={50}
-              className="w-4 h-auto md:w-7"
+              className="w-5 h-auto md:w-9"
               alt="logo"
             />
             حصادي
@@ -20,7 +29,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-bold">عنّا</h3>
+          <h3 className="text-lg font-bold">عن حصادي</h3>
           <div>
             <a href="#" className="opacity-60 hover:opacity-100">
               الخدمات
@@ -38,7 +47,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">تابعنا </h3>
 
           <div>
@@ -52,7 +61,7 @@ export const Footer = () => {
               لنكدن
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">تواصل معنا</h3>
@@ -62,14 +71,37 @@ export const Footer = () => {
               hasady@gmail.com
             </a>
           </div>
+          <section className=" flex items-center gap-3">
+            <a
+              href="https://twitter.com/7assan_abdulaal"
+              className="text-xl"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faXTwitter} />
+            </a>
+            <a
+              href="https://github.com/HassanAlabdulal"
+              className="text-xl"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hassan-alabdulal/"
+              className="text-xl"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </section>
         </div>
       </section>
 
-      <section className="container text-center pb-14">
+      <main className="container text-center pb-14">
         <h3 className="flex items-center justify-center gap-1 text-sm md:text-base text-muted-foreground ">
           جميع الحقوق محفوظة، حصادي &copy; ٢٠٢٤
         </h3>
-      </section>
+      </main>
     </footer>
   );
 };
