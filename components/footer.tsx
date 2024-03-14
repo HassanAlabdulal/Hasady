@@ -49,6 +49,26 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
+          <h3 className="text-lg font-bold">الحاسبات </h3>
+          <div>
+            <a href="#" className="opacity-60 hover:opacity-100">
+              حاسبة الأسهم
+            </a>
+          </div>
+
+          <div>
+            <a href="#" className="opacity-60 hover:opacity-100">
+              حاسبة القروض
+            </a>
+          </div>
+          <div>
+            <a href="#" className="opacity-60 hover:opacity-100">
+              حاسبة العملات
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">تواصل معنا</h3>
 
           <div>
@@ -59,21 +79,21 @@ export const Footer = () => {
           <section className=" flex items-center gap-3">
             <a
               href="https://twitter.com/7assan_abdulaal"
-              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
+              className="text-lg transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a
               href="https://github.com/HassanAlabdulal"
-              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
+              className="text-lg transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href="https://www.linkedin.com/in/hassan-alabdulal/"
-              className="text-xl transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
+              className="text-lg transition-all duration-300 hover:scale-110 bg-[#AA8A41]/25  p-2 rounded-lg flex justify-center"
               target="_blank"
             >
               <FontAwesomeIcon icon={faLinkedin} />
