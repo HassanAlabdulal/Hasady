@@ -92,12 +92,12 @@ export default function SignIn() {
             <div className="space-y-1">
               <Label htmlFor="emailSignIn">البريد الالكتروني</Label>
               <Input name="emailSignIn" id="emailSignIn" type="email" placeholder="tryhasady@gmail.com" onChange={handleChange} />
-              {errors.emailSignIn && <p className="text-red-500">{errors.emailSignIn}</p>}
+              {errors.emailSignIn && <p className="mt-1 text-red-500">{errors.emailSignIn}</p>}
             </div>
             <div className="space-y-1">
               <Label htmlFor="passwordSignIn">كلمة المرور</Label>
               <Input name="passwordSignIn" id="passwordSignIn" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignIn && <p className="text-red-500">{errors.passwordSignIn}</p>}
+              {errors.passwordSignIn && <p className="mt-1 text-red-500">{errors.passwordSignIn}</p>}
             </div>
 
             {/* Section for 'Remember Me' checkbox and 'Forgot Password' link. */}

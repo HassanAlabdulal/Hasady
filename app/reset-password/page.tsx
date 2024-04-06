@@ -69,7 +69,7 @@ export default function ResetPassword() {
                   className="w-full"
                 />
                 {errors.passwordReset && (
-                  <p className="text-red-500">{errors.passwordReset}</p>
+                  <p className="mt-1 text-red-500">{errors.passwordReset}</p>
                 )}
               </div>
               <div>
@@ -84,7 +84,7 @@ export default function ResetPassword() {
                   className="w-full"
                 />
                 {errors.passwordResetConfirm && (
-                  <p className="text-red-500">{errors.passwordResetConfirm}</p>
+                  <p className="mt-1 text-red-500">{errors.passwordResetConfirm}</p>
                 )}
               </div>
             </div>

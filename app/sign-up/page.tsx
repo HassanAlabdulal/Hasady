@@ -82,22 +82,22 @@ export default function SignUp() {
             <div>
               <Label htmlFor="fullName">الاسم الكامل</Label>
               <Input name="fullName" id="fullName" placeholder="محمد عبدالله" onChange={handleChange} />
-              {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
+              {errors.fullName && <p className="mt-1 text-red-500">{errors.fullName}</p>}
             </div>
             <div>
               <Label htmlFor="emailSignUp">البريد الالكتروني</Label>
               <Input name="emailSignUp" id="emailSignUp" type="email" placeholder="tryhasady@gmail.com" onChange={handleChange} />
-              {errors.emailSignUp && <p className="text-red-500">{errors.emailSignUp}</p>}
+              {errors.emailSignUp && <p className="mt-1 text-red-500">{errors.emailSignUp}</p>}
             </div>
             <div>
               <Label htmlFor="passwordSignUp">كلمة المرور</Label>
               <Input name="passwordSignUp" id="passwordSignUp" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignUp && <p className="text-red-500">{errors.passwordSignUp}</p>}
+              {errors.passwordSignUp && <p className="mt-1 text-red-500">{errors.passwordSignUp}</p>}
             </div>
             <div>
               <Label htmlFor="passwordSignUpConfirm">تأكيد كلمة المرور</Label>
               <Input name="passwordSignUpConfirm" id="passwordSignUpConfirm" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignUpConfirm && <p className="text-red-500">{errors.passwordSignUpConfirm}</p>}
+              {errors.passwordSignUpConfirm && <p className="mt-1 text-red-500">{errors.passwordSignUpConfirm}</p>}
             </div>
           </CardContent>
           <CardFooter>

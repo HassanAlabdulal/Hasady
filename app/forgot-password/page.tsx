@@ -74,7 +74,7 @@ export default function ForgotPassword() {
                     onChange={handleChange}
                     className="w-full mt-1"
                   />
-                  {errors.emailForgotPassword && <p className="text-red-500">{errors.emailForgotPassword}</p>}
+                  {errors.emailForgotPassword && <p className="mt-1 text-red-500">{errors.emailForgotPassword}</p>}
                 </div>
                 <Button type="submit" className="w-full">
                   إرسال رابط إعادة التعيين
