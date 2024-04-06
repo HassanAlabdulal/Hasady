@@ -79,12 +79,12 @@ export default function SignIn() {
 
   // Render the sign-in form.
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] bg-[#f9f9f9]">
         <form onSubmit={handleSubmit}>
           <CardHeader>
-            <CardTitle>تسجيل الدخول</CardTitle>
-            <CardDescription>
+            <CardTitle className='text-center'>تسجيل الدخول</CardTitle>
+            <CardDescription className='text-center'>
               قم بتسجيل الدخول من هنا
             </CardDescription>
           </CardHeader>

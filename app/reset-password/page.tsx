@@ -49,10 +49,10 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] bg-[#f9f9f9]">
         <CardHeader>
-          <CardTitle>إعادة تعيين كلمة المرور</CardTitle>
+          <CardTitle className='text-center'>إعادة تعيين كلمة المرور</CardTitle>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>

@@ -69,11 +69,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] mt-10 bg-[#f9f9f9]">
         <CardHeader>
-          <CardTitle>التسجيل</CardTitle>
-          <CardDescription>
+          <CardTitle className='text-center'>التسجيل</CardTitle>
+          <CardDescription className='text-center'>
             قم بتسجيل حساب جديد من هنا
           </CardDescription>
         </CardHeader>

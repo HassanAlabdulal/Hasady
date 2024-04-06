@@ -58,10 +58,10 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] bg-[#f9f9f9]">
         <CardHeader>
-          <CardTitle>استعادة كلمة المرور</CardTitle>
+          <CardTitle className='text-center'>استعادة كلمة المرور</CardTitle>
         </CardHeader>
         {!showMessage ? (
           <form onSubmit={handleSubmit}>
