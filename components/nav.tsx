@@ -1,15 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import ModeToggle from "./modeToggle";
 import Link from "next/link";
+// import ModeToggle from "./modeToggle";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Variants for Framer Motion animation
   const navVariants = {
@@ -29,11 +48,17 @@ export default function Nav() {
 
   return (
     <header
-      className=" z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap"
-      style={{ backgroundImage: "url('/assets/navBackground.png')" }}
+      className={`z-50 flex flex-wrap fixed w-full text-sm py-8 sm:justify-start sm:flex-nowrap ${
+        isScrolled ? "bg-[#f9f9f9] transition-all duration-200" : ""
+      }`}
+      style={{
+        backgroundImage: isScrolled
+          ? "none"
+          : "url('/assets/navBackground.png')",
+      }}
     >
       <nav
-        className=" max-w-[80rem] w-full mx-auto md:px-10 px-5 sm:flex sm:items-center sm:justify-between"
+        className=" max-w-[80rem] w-full mx-auto md:px-10 px-9 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -146,7 +171,7 @@ export default function Nav() {
               animate="visible"
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-3/5
-               rounded-2xl gap-5 text-lg text-primary-foreground text-center shadow-md py-6 mt-4 ml-5 backgroundColor"
+               rounded-2xl gap-5 text-lg text-black text-center shadow-md py-6 mt-4 ml-5 bg-slate-100"
             >
               <a className="my-2 font-semibold w-5/6 " href="/">
                 معدل الأرباح
@@ -162,6 +187,7 @@ export default function Nav() {
               </a>
               <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
                 <Link href="/sign-in"> تسجيل الدخول</Link>
+
               </Button>
             </motion.div>
           )}
@@ -175,6 +201,7 @@ export default function Nav() {
         >
           <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
           <Link href="/sign-in"> تسجيل الدخول</Link>
+
           </Button>
           {/* <ModeToggle /> */}
         </motion.div>
