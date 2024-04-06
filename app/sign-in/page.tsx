@@ -118,7 +118,7 @@ export default function SignIn() {
             <Button type="submit" className="w-full mb-2">تسجيل الدخول</Button>
           </CardFooter>
           {/* Link to sign-up page */}
-          <div className="text-center">
+          <div className="text-center mb-10">
             <span className="text-sm text-gray-600">ليس لديك حساب؟ </span>
             <a href="/sign-up" className="text-sm text-blue-600 hover:underline">سجل الآن</a>
           </div>
