@@ -11,29 +11,40 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { z } from "zod";
+import { authSchema } from "@/validators/forgot-password"; 
 
-// Email validation schema
-const emailSchema = z.object({
-  email: z.string().email({ message: "الرجاء إدخال بريد إلكتروني صالح." }),
-});
+export interface FormErrors {
+  emailForgotPassword?: string;
+}
 
 export default function ForgotPassword() {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    emailForgotPassword: ""
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [showMessage, setShowMessage] = useState(false);
 
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   // Handle form submission
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError("");
+    setErrors({});
 
     // Validate email
-    const result = emailSchema.safeParse({ email });
+    const result = authSchema.safeParse(formData);
 
     if (!result.success) {
-      // If validation fails, show an error
-      setError(result.error.issues[0].message);
+      // Convert Zod error issues to a more accessible errors object
+      const newErrors = result.error.issues.reduce((acc, issue) => {
+        acc[issue.path[0] as keyof FormErrors] = issue.message;
+        return acc;
+      }, {} as FormErrors);
+      setErrors(newErrors);
     } else {
       // If validation succeeds, show the message box
       setShowMessage(true);
@@ -47,29 +58,24 @@ export default function ForgotPassword() {
   };
 
   return (
-    <div className="flex md:items-center items-start max-sm:mt-24 justify-center h-screen">
-      <Card className="w-full max-w-md p-4">
+    <div className="flex items-center justify-center h-screen">
+      <Card className="w-[400px]">
         <CardHeader>
           <CardTitle>استعادة كلمة المرور</CardTitle>
         </CardHeader>
         {!showMessage ? (
-          // Email input form
           <form onSubmit={handleSubmit}>
             <CardContent>
               <div className="space-y-5">
                 <div>
-                  <Label htmlFor="email">البريد الإلكتروني</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="tryhasady@gmail.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                  <Label htmlFor="emailForgotPassword">البريد الإلكتروني</Label>
+                  <Input name="emailForgotPassword" id="emailForgotPassword" type="email" placeholder="tryhasady@gmail.com"
+                    value={formData.emailForgotPassword}
+                    onChange={handleChange}
                     className="w-full mt-1"
                   />
-                  {error && <p className="text-red-500">{error}</p>}
+                  {errors.emailForgotPassword && <p className="text-red-500">{errors.emailForgotPassword}</p>}
                 </div>
-
                 <Button type="submit" className="w-full">
                   إرسال رابط إعادة التعيين
                 </Button>
@@ -77,12 +83,10 @@ export default function ForgotPassword() {
             </CardContent>
           </form>
         ) : (
-          // Temporary message box
           <div className="flex flex-col items-center justify-center p-4">
             <p className="mb-4 text-center">
               يرجى مراجعة بريدك الالكتروني لإعادة تعيين كلمة المرور.
             </p>
-            <Button onClick={handleCloseMessage}>موافق</Button>
           </div>
         )}
       </Card>

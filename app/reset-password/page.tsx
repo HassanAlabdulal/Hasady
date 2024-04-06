@@ -2,44 +2,21 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { z } from "zod";
+import {authSchema} from "@/validators/reset-password"; 
 
-// Define the shape of the errors object
-interface FormErrors {
-  password?: string;
-  passwordConfirm?: string;
+// Define the shape of the errors object for forms
+export interface FormErrors {
+  passwordReset?: string;
+  passwordResetConfirm?: string;
 }
-
-// Password reset validation schema
-const resetPasswordSchema = z
-  .object({
-    password: z
-      .string()
-      .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
-      .max(100),
-    passwordConfirm: z
-      .string()
-      .min(6, { message: "يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل" })
-      .max(100),
-  })
-  .refine((data) => data.password === data.passwordConfirm, {
-    message: "كلمة المرور وتأكيد كلمة المرور لا تتطابقان",
-    path: ["passwordConfirm"],
-  });
 
 export default function ResetPassword() {
   const [formData, setFormData] = useState({
-    password: "",
-    passwordConfirm: "",
+    passwordReset: "",
+    passwordResetConfirm: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -55,7 +32,7 @@ export default function ResetPassword() {
     setErrors({});
 
     // Validate passwords
-    const result = resetPasswordSchema.safeParse(formData);
+    const result = authSchema.safeParse(formData);
 
     if (!result.success) {
       // Convert the Zod error issues to a more accessible errors object
@@ -72,8 +49,8 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="flex md:items-center items-start max-sm:mt-24 justify-center h-screen">
-      <Card className="w-full max-w-md p-4">
+    <div className="flex items-center justify-center h-screen">
+      <Card className="w-[400px]">
         <CardHeader>
           <CardTitle>إعادة تعيين كلمة المرور</CardTitle>
         </CardHeader>
@@ -81,36 +58,33 @@ export default function ResetPassword() {
           <CardContent>
             <div className="space-y-5">
               <div>
-                <Label htmlFor="password">كلمة المرور الجديدة</Label>
+                <Label htmlFor="passwordReset">كلمة المرور الجديدة</Label>
                 <Input
-                  id="password"
-                  name="password"
+                  id="passwordReset"
+                  name="passwordReset"
                   type="password"
-                  placeholder="يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل"
-                  value={formData.password}
+                  placeholder="********"
+                  value={formData.passwordReset}
                   onChange={handleChange}
                   className="w-full"
                 />
-                {errors.password && (
-                  <p className="text-red-500">{errors.password}</p>
+                {errors.passwordReset && (
+                  <p className="text-red-500">{errors.passwordReset}</p>
                 )}
               </div>
-
               <div>
-                <Label htmlFor="passwordConfirm">
-                  تأكيد كلمة المرور الجديدة
-                </Label>
+                <Label htmlFor="passwordResetConfirm">تأكيد كلمة المرور الجديدة</Label>
                 <Input
-                  id="passwordConfirm"
-                  name="passwordConfirm"
+                  id="passwordResetConfirm"
+                  name="passwordResetConfirm"
                   type="password"
-                  placeholder="يجب أن تحتوي كلمة المرور على ٦ خانات على الأقل"
-                  value={formData.passwordConfirm}
+                  placeholder="********"
+                  value={formData.passwordResetConfirm}
                   onChange={handleChange}
                   className="w-full"
                 />
-                {errors.passwordConfirm && (
-                  <p className="text-red-500">{errors.passwordConfirm}</p>
+                {errors.passwordResetConfirm && (
+                  <p className="text-red-500">{errors.passwordResetConfirm}</p>
                 )}
               </div>
             </div>
