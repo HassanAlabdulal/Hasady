@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import ModeToggle from "./modeToggle";
+import Link from "next/link";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -160,7 +161,7 @@ export default function Nav() {
                 تحويل العملات
               </a>
               <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
-                تسجيل الدخول
+                <Link href="/sign-in"> تسجيل الدخول</Link>
               </Button>
             </motion.div>
           )}
@@ -173,7 +174,7 @@ export default function Nav() {
           transition={{ delay: 0.25 }}
         >
           <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
-            تسجيل الدخول
+          <Link href="/sign-in"> تسجيل الدخول</Link>
           </Button>
           {/* <ModeToggle /> */}
         </motion.div>
