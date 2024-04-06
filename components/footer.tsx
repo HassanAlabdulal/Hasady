@@ -22,7 +22,7 @@ export const Footer = () => {
     <footer className="bg-[#f9f9f9]">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container  grid grid-cols-2 py-20 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      <section className="container grid grid-cols-2 py-20 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <a href="/" className="flex text-2xl font-bold">
             <Image
