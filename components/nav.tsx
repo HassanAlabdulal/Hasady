@@ -187,7 +187,6 @@ export default function Nav() {
               </a>
               <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
                 <Link href="/sign-in"> تسجيل الدخول</Link>
-
               </Button>
             </motion.div>
           )}
@@ -199,9 +198,8 @@ export default function Nav() {
           initial={{ opacity: 0, x: -20 }}
           transition={{ delay: 0.25 }}
         >
-          <Button className=" rounded-lg shadow-2xl bg-black font-bold hover:bg-neutral-800">
-          <Link href="/sign-in"> تسجيل الدخول</Link>
-
+          <Button className=" rounded-full px-5 shadow-2xl bg-black font-bold hover:bg-neutral-800">
+            <Link href="/sign-in"> تسجيل الدخول</Link>
           </Button>
           {/* <ModeToggle /> */}
         </motion.div>
