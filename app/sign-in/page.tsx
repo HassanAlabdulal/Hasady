@@ -79,12 +79,12 @@ export default function SignIn() {
 
   // Render the sign-in form.
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] bg-[#f9f9f9]">
         <form onSubmit={handleSubmit}>
           <CardHeader>
-            <CardTitle>تسجيل الدخول</CardTitle>
-            <CardDescription>
+            <CardTitle className='text-center'>تسجيل الدخول</CardTitle>
+            <CardDescription className='text-center'>
               قم بتسجيل الدخول من هنا
             </CardDescription>
           </CardHeader>
@@ -92,12 +92,12 @@ export default function SignIn() {
             <div className="space-y-1">
               <Label htmlFor="emailSignIn">البريد الالكتروني</Label>
               <Input name="emailSignIn" id="emailSignIn" type="email" placeholder="tryhasady@gmail.com" onChange={handleChange} />
-              {errors.emailSignIn && <p className="text-red-500">{errors.emailSignIn}</p>}
+              {errors.emailSignIn && <p className="mt-1 text-red-500">{errors.emailSignIn}</p>}
             </div>
             <div className="space-y-1">
               <Label htmlFor="passwordSignIn">كلمة المرور</Label>
               <Input name="passwordSignIn" id="passwordSignIn" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignIn && <p className="text-red-500">{errors.passwordSignIn}</p>}
+              {errors.passwordSignIn && <p className="mt-1 text-red-500">{errors.passwordSignIn}</p>}
             </div>
 
             {/* Section for 'Remember Me' checkbox and 'Forgot Password' link. */}
@@ -118,7 +118,7 @@ export default function SignIn() {
             <Button type="submit" className="w-full mb-2">تسجيل الدخول</Button>
           </CardFooter>
           {/* Link to sign-up page */}
-          <div className="text-center">
+          <div className="text-center mb-10">
             <span className="text-sm text-gray-600">ليس لديك حساب؟ </span>
             <a href="/sign-up" className="text-sm text-blue-600 hover:underline">سجل الآن</a>
           </div>

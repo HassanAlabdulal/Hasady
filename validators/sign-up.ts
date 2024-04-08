@@ -3,6 +3,7 @@ import { z } from "zod";
 export const authSchema = z.object({
   emailSignUp: z.string().email({ message: "البريد الالكتروني المدخل غير صحيح" }),
   fullName: z.string()
+    .regex(/^[A-Za-z\u0600-\u06FF\s]+$/, { message: "الاسم يجب أن يحتوي فقط على حروف ومسافات" })
     .min(2, { message: "اكتب الاسم بشكل صحيح" })
     .max(255),
   passwordSignUp: z.string()

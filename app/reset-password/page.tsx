@@ -49,10 +49,10 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] bg-[#f9f9f9]">
         <CardHeader>
-          <CardTitle>إعادة تعيين كلمة المرور</CardTitle>
+          <CardTitle className='text-center'>إعادة تعيين كلمة المرور</CardTitle>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent>
@@ -69,7 +69,7 @@ export default function ResetPassword() {
                   className="w-full"
                 />
                 {errors.passwordReset && (
-                  <p className="text-red-500">{errors.passwordReset}</p>
+                  <p className="mt-1 text-red-500">{errors.passwordReset}</p>
                 )}
               </div>
               <div>
@@ -84,7 +84,7 @@ export default function ResetPassword() {
                   className="w-full"
                 />
                 {errors.passwordResetConfirm && (
-                  <p className="text-red-500">{errors.passwordResetConfirm}</p>
+                  <p className="mt-1 text-red-500">{errors.passwordResetConfirm}</p>
                 )}
               </div>
             </div>

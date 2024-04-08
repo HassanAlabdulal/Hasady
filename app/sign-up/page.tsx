@@ -69,11 +69,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-[400px]">
+    <div className="flex items-center justify-center h-screen bg-[#f9f9f9]">
+      <Card className="w-[400px] mt-10 bg-[#f9f9f9]">
         <CardHeader>
-          <CardTitle>التسجيل</CardTitle>
-          <CardDescription>
+          <CardTitle className='text-center'>التسجيل</CardTitle>
+          <CardDescription className='text-center'>
             قم بتسجيل حساب جديد من هنا
           </CardDescription>
         </CardHeader>
@@ -82,22 +82,22 @@ export default function SignUp() {
             <div>
               <Label htmlFor="fullName">الاسم الكامل</Label>
               <Input name="fullName" id="fullName" placeholder="محمد عبدالله" onChange={handleChange} />
-              {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
+              {errors.fullName && <p className="mt-1 text-red-500">{errors.fullName}</p>}
             </div>
             <div>
               <Label htmlFor="emailSignUp">البريد الالكتروني</Label>
               <Input name="emailSignUp" id="emailSignUp" type="email" placeholder="tryhasady@gmail.com" onChange={handleChange} />
-              {errors.emailSignUp && <p className="text-red-500">{errors.emailSignUp}</p>}
+              {errors.emailSignUp && <p className="mt-1 text-red-500">{errors.emailSignUp}</p>}
             </div>
             <div>
               <Label htmlFor="passwordSignUp">كلمة المرور</Label>
               <Input name="passwordSignUp" id="passwordSignUp" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignUp && <p className="text-red-500">{errors.passwordSignUp}</p>}
+              {errors.passwordSignUp && <p className="mt-1 text-red-500">{errors.passwordSignUp}</p>}
             </div>
             <div>
               <Label htmlFor="passwordSignUpConfirm">تأكيد كلمة المرور</Label>
               <Input name="passwordSignUpConfirm" id="passwordSignUpConfirm" type="password" placeholder="********" onChange={handleChange} />
-              {errors.passwordSignUpConfirm && <p className="text-red-500">{errors.passwordSignUpConfirm}</p>}
+              {errors.passwordSignUpConfirm && <p className="mt-1 text-red-500">{errors.passwordSignUpConfirm}</p>}
             </div>
           </CardContent>
           <CardFooter>
