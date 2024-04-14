@@ -32,7 +32,7 @@ export default function Start() {
             <div>
               <h1 className="text-3xl mt-6 mb-1">قراراتك المالية صارت</h1>
             </div>
-            <div className="mb-6">
+            <div className="mb-8">
               <span className="font-semibold text-3xl bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
                 أسهل وأسرع!
               </span>
