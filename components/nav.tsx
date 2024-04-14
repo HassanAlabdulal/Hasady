@@ -185,7 +185,7 @@ export default function Nav() {
               <a className="my-2 font-semibold w-5/6" href="/">
                 تحويل العملات
               </a>
-              <Button className=" rounded-xl text-md w-5/6 shadow-2xl bg-primary-foreground text-[#004883] font-bold ">
+              <Button className=" rounded-full w-5/6 shadow-2xl bg-black font-bold hover:bg-neutral-800">
                 <Link href="/sign-in"> تسجيل الدخول</Link>
               </Button>
             </motion.div>
