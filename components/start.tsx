@@ -15,7 +15,10 @@ export default function Start() {
   }, []);
   return (
     <section id="about" className=" w-full bg-[#f9f9f9] max-sm:pb-24 pb-36">
-      <div className="shadow-lg bg-[#f7f7f7] rounded-3xl container pb-0 pt-16 max-sm:py-12">
+      <div
+        className="shadow-lg bg-[#f7f7f7] rounded-3xl container pb-0 pt-16 max-sm:py-12"
+        data-aos="fade-up"
+      >
         <div className="md:px-32 flex flex-col-reverse md:flex-row gap-8 md:gap-[14rem] justify-center">
           <img
             src="/assets/starting.svg"
