@@ -15,8 +15,8 @@ export default function Start() {
   }, []);
   return (
     <section id="about" className=" w-full bg-[#f9f9f9] max-sm:pb-24 pb-36">
-      <div className="shadow-lg bg-[#f7f7f7] rounded-3xl container py-24 max-sm:py-12">
-        <div className="md:px-32 flex flex-col-reverse md:flex-row gap-8 md:gap-24">
+      <div className="shadow-lg bg-[#f7f7f7] rounded-3xl container py-20 max-sm:py-12">
+        <div className="md:px-32 flex flex-col-reverse md:flex-row gap-8 md:gap-24 justify-center">
           <img
             src="/assets/starting.svg"
             alt="Starting Setion"
@@ -30,13 +30,14 @@ export default function Start() {
               </h2>
             </div>
             <div>
-              <h1 className="text-3xl font-semibold mt-4 mb-12">
-                قراراتك المالية صارت أسهل وأسرع!
+              <h1 className="text-3xl mt-6 mb-6">
+                قراراتك المالية صارت{" "}
+                <span className="font-semibold">أسهل وأسرع!</span>
               </h1>
             </div>
 
             <div>
-              <Button className=" rounded-full px-16 shadow-2xl bg-black font-semibold hover:bg-neutral-800">
+              <Button className=" rounded-full px-24 shadow-2xl bg-black font-semibold hover:bg-neutral-800">
                 <Link href="/sign-in">ابدأ الآن </Link>
               </Button>
             </div>
