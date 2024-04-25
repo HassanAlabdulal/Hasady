@@ -76,7 +76,7 @@ export default function ForgotPassword() {
                   />
                   {errors.emailForgotPassword && <p className="mt-1 text-red-500">{errors.emailForgotPassword}</p>}
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full mb-2 bg-black rounded-full px-5 shadow-2xl font-bold hover:bg-neutral-800">
                   إرسال رابط إعادة التعيين
                 </Button>
               </div>

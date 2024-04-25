@@ -101,7 +101,7 @@ export default function SignUp() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full">إنشاء حساب</Button>
+            <Button type="submit" className="w-full mb-2 bg-black rounded-full px-5 shadow-2xl font-bold hover:bg-neutral-800">إنشاء حساب</Button>
           </CardFooter>
         </form>
       </Card>

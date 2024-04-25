@@ -115,7 +115,7 @@ export default function SignIn() {
           </CardContent>
           <CardFooter>
             {/* Sign-in button */}
-            <Button type="submit" className="w-full mb-2">تسجيل الدخول</Button>
+            <Button type="submit" className="w-full mb-2 bg-black rounded-full px-5 shadow-2xl font-bold hover:bg-neutral-800">تسجيل الدخول</Button>
           </CardFooter>
           {/* Link to sign-up page */}
           <div className="text-center mb-10">

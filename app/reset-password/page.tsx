@@ -90,7 +90,7 @@ export default function ResetPassword() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full mb-2 bg-black rounded-full px-5 shadow-2xl font-bold hover:bg-neutral-800">
               تغيير كلمة المرور
             </Button>
           </CardFooter>
