@@ -21,7 +21,7 @@ import { redirect } from "next/navigation";
 // Define the shape of the errors object
 
 export default function SignUp() {
-  Route();
+  // Route();
   // States for storing form data & validation errors.
   const [formData, setFormData] = useState<SignUpForm>();
   const [errors, setErrors] = useState<SignUpForm>();

@@ -28,7 +28,7 @@ interface FormErrors {
 
 // SignIn component definition.
 export default function SignIn() {
-  Route();
+  // Route();
   // States for storing form data & validation errors.
   const [formData, setFormData] = useState<UserAuth>();
   const [errors, setErrors] = useState<FormErrors>({});
