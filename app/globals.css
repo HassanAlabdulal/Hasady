@@ -96,7 +96,10 @@
   background-attachment: fixed;
 }
 
+.button-svg {
+  transition: transform 0.2s ease;
+}
+
 .start-btn:hover .button-svg {
   transform: translateX(-6px);
-  transition: all 0.2s ease;
 }
