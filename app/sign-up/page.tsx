@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,14 +14,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { authSchema } from "@/validators/sign-up";
 import { SignUpForm, UserAuth } from "../../types/auth";
-import { signUp } from "./actions";
+import { Route, signUp } from "./actions";
+import { isAuthenticated } from "../auth_actions";
+import { redirect } from "next/navigation";
 
 // Define the shape of the errors object
 
 export default function SignUp() {
+  Route();
+  // States for storing form data & validation errors.
   const [formData, setFormData] = useState<SignUpForm>();
-
-  // Error state
   const [errors, setErrors] = useState<SignUpForm>();
 
   // Handle input changes
