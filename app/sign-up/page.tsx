@@ -31,7 +31,7 @@ export default function SignUp() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Check if passwords match before running schema validation
@@ -58,7 +58,12 @@ export default function SignUp() {
       // If there are no errors, log the valid data and presumably send it to the server
       // signUp({})
       setErrors({});
-      console.log("Form data is valid:", formData);
+      // console.log("Form data is valid:", formData);
+      await signUp({
+        name: formData?.name,
+        email: formData?.email!,
+        password: formData?.password!,
+      });
       // Send data to the server here
     }
   };
