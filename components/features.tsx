@@ -70,7 +70,8 @@ export default function Features() {
                   <Card
                     key={title}
                     data-aos={dataAos}
-                    className="bg-[#f7f7f7] shadow-md"
+                    className="bg-[#f7f7f7] shadow-md rounded-[1.5rem]"
+                    // className="bg-[#f7f7f7] hover:bg-[#f5f5f5] dark:bg-[#121212] border-0 dark:hover:bg-[#27272a] transition-all duration-400 shadow-md rounded-[1.5rem]"
                   >
                     <CardHeader className="flex md:flex-row md:justify-start justify-center md:items-start items-center gap-4">
                       <div className=" p-1 rounded-2xl ">{icon}</div>

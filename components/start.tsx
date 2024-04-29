@@ -38,17 +38,17 @@ export default function Start() {
               </span>
             </div>
 
-            <div>
-              <Button className="rounded-full px-24 py-6 text-xl shadow-2xl bg-black font-normal hover:bg-neutral-800">
-                <div className="flex gap-2">
-                  <Link href="/sign-in">ابدأ الآن </Link>
+            <Button className="start-btn rounded-full px-24 py-6 text-xl shadow-2xl bg-black font-normal hover:bg-neutral-800 relative">
+              <div className="flex gap-2 items-center">
+                <Link href="/sign-in">ابدأ الآن </Link>
+                <div className="transition-transform duration-150">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-6 h-6 button-svg"
                   >
                     <path
                       strokeLinecap="round"
@@ -57,8 +57,8 @@ export default function Start() {
                     />
                   </svg>
                 </div>
-              </Button>
-            </div>
+              </div>
+            </Button>
           </div>
         </div>
       </div>
