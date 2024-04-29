@@ -5,14 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { LogOut, isAuthenticated } from "@/app/auth_actions";
 // import ModeToggle from "./modeToggle";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activeLink, setActiveLink] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   useEffect(() => {
+    const fetchAuthorized = async () => {
+      setIsAuthorized(await isAuthenticated());
+    };
+    fetchAuthorized();
+
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -198,9 +205,20 @@ export default function Nav() {
           initial={{ opacity: 0, x: -20 }}
           transition={{ delay: 0.25 }}
         >
-          <Button className=" rounded-full px-5 shadow-2xl bg-black font-bold hover:bg-neutral-800">
-            <Link href="/sign-in"> تسجيل الدخول</Link>
-          </Button>
+          {!isAuthorized && (
+            <Button className=" rounded-full px-5 shadow-2xl bg-black font-bold hover:bg-neutral-800">
+              <Link href="/sign-in"> تسجيل الدخول</Link>
+            </Button>
+          )}
+          {/* Temporary Button */}
+          {isAuthorized && (
+            <Button
+              // onClick={LogOut}
+              className=" rounded-full px-5 shadow-2xl bg-black font-bold hover:bg-neutral-800"
+            >
+              تسجيل خروج
+            </Button>
+          )}
           {/* <ModeToggle /> */}
         </motion.div>
       </nav>
