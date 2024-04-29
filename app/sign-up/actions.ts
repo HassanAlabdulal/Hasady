@@ -1,14 +1,14 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-
 import { createClient } from "@/utils/supabase/server";
 import { UserAuth } from "../../types/auth";
+import { isAuthenticated } from "../auth_actions";
 
-const cookieStore = cookies();
-const supabase = createClient(cookieStore);
+// const cookieStore = cookies();
+const supabase = createClient();
 
 export async function signUp(dataAuth: UserAuth) {
   const { data, error } = await supabase.auth.signUp(dataAuth);
@@ -35,4 +35,11 @@ async function SignName(id: string, full_name: string) {
   }
   revalidatePath("/", "layout");
   redirect("/");
+}
+
+export async function Route() {
+  if (await isAuthenticated()) {
+    revalidatePath("/", "layout");
+    redirect("/");
+  }
 }

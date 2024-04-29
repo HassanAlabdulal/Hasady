@@ -1,7 +1,7 @@
 "use client";
 
 // Import necessary React and component modules.
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,7 +16,9 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { authSchema } from "@/validators/sign-in";
 import { UserAuth } from "../../types/auth";
-import { login } from "./actions";
+import { Route, login } from "./actions";
+import { isAuthenticated } from "../auth_actions";
+import { redirect } from "next/navigation";
 
 // Define the interface for form error messages.
 interface FormErrors {
@@ -26,10 +28,9 @@ interface FormErrors {
 
 // SignIn component definition.
 export default function SignIn() {
-  // State for storing form data.
+  // Route();
+  // States for storing form data & validation errors.
   const [formData, setFormData] = useState<UserAuth>();
-
-  // State for storing validation errors.
   const [errors, setErrors] = useState<FormErrors>({});
 
   // Handler for form input changes, updating the state with new values.
@@ -75,7 +76,7 @@ export default function SignIn() {
     } else {
       // Clear errors and log valid form data or send to server.
       setErrors({});
-      console.log("Form data is valid:", formData);
+      // console.log("Form data is valid:", formData);
 
       await login(formData!);
     }
