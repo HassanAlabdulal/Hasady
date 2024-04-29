@@ -75,7 +75,7 @@ export default function SignIn() {
     } else {
       // Clear errors and log valid form data or send to server.
       setErrors({});
-      console.log("Form data is valid:", formData);
+      // console.log("Form data is valid:", formData);
 
       await login(formData!);
     }
