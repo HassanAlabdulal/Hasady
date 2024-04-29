@@ -86,7 +86,7 @@ export default function Services() {
               data-aos={dataAos}
               key={title}
               // className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-500 shadow-md hover:shadow-xl hover:scale-105 rounded-2xl"
-              className="bg-[#f7f7f7] hover:bg-[#f5f5f5] dark:bg-[#121212] border-0 dark:hover:bg-[#27272a] transition-all max-w-[470px] duration-400 shadow-md  rounded-[3rem]"
+              className="bg-[#f7f7f7] hover:bg-[#f5f5f5] transition-all max-w-[470px] duration-400 shadow-md rounded-[3rem]"
             >
               <CardHeader className="mt-4">
                 <CardTitle className=" text-center ">{title}</CardTitle>

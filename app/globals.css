@@ -95,3 +95,11 @@
   background-position: center;
   background-attachment: fixed;
 }
+
+.button-svg {
+  transition: transform 0.25s ease;
+}
+
+.start-btn:hover .button-svg {
+  transform: translateX(-6px);
+}
